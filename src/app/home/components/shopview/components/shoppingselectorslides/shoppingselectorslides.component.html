@@ -1,0 +1,106 @@
+
+  <!-- categories thumbnails -->
+    <swiper-container  
+          class="categoriesthumbs" 
+          slides-per-view="2.3"
+          initial-slide="0" 
+          pagination ="false" 
+          navigation="false" 
+          free-mode="true" 
+          loop="false"  
+          space-between="10"
+          simulate-touch="true"
+          centered-slides="true"  
+          mousewheel="false" 
+          scrollbar="false"  
+          slide-to-clicked-slide="true"
+          #categoriesthumbs
+            >  
+          
+            <swiper-slide  *ngFor="let category of categories ; let i = index; trackBy:commonService.trackByIdFn">
+              <ion-item class="slidecategoryitem">
+                  <ion-icon slot="start" name="{{category.icon}}"></ion-icon>
+                  <ion-label>
+                    <h1>{{category.name}}</h1>
+                    <p>{{category.counts | number}}</p>
+                  </ion-label>
+              </ion-item> 
+                
+            </swiper-slide>
+          
+    </swiper-container>
+
+    <!-- categories list -->
+    <swiper-container  
+                class="categorieslistslides"
+                slides-per-view="1"
+                initial-slide="0" 
+                pagination ="false" 
+                navigation="false" 
+                space-between="10"
+                free-mode="false" 
+                loop="false"  
+                simulate-touch="true"
+                centered-slides="true"   
+                mousewheel="false" 
+                scrollbar="false" 
+                allow-slide-next="true"
+                slide-to-clicked-slide="true"
+                thumbs-swiper=".categoriesthumbs" 
+                (slideChange)="slideChange()"
+                (slideChangeTransitionStart)="slideChangeTransitionStart()"
+                (activeIndexChange)="activeIndexChange()"
+                #categorieslistslides
+    >
+                <swiper-slide *ngFor="let category of categories ; let  i = index; trackBy:commonService.trackByIdFn">
+                     
+                        <ion-item  
+                         button
+                          *ngFor="let product of category.visibleproducts; trackBy:commonService.trackByIdFn "
+                          class="productitem pointer cursor" 
+                        > 
+                              <ion-avatar class="bgimage" slot="start" 
+                              (click)="increaseQtyInCart(product)"
+                              style="background-image: url('{{product.media.url}}');">
+                              </ion-avatar>
+
+                              <ion-label class="productdetails" (click)="increaseQtyInCart(product)"> 
+                                    <h2 class="productname">
+                                        {{product.name}}
+                                    </h2>
+                                    <p class="descr">  
+                                      <ion-badge class="pricebadge">
+                                          @ <span class="currency">{{shop.currency }}</span> {{product.price | number }} 
+                                          <i class="uom" *ngIf="product.uom">/{{product.uom}}</i>
+                                      </ion-badge>
+                                    </p>  
+                              </ion-label>
+
+                              <ion-avatar slot="end" class="qtyadjuster" *ngIf="product.qtyincart"> 
+                                      <ion-button fill="clear" class="increasebtn"
+                                          (click)="increaseQtyInCart(product)">
+                                          <ion-icon name="add"></ion-icon> 
+                                      </ion-button>
+                                      
+                                      <ion-input type="number" [(ngModel)]="product.qtyincart" (ngModelChange)="adjustQty(product)"></ion-input>
+                            
+                                      <ion-button fill="clear" class="decreasebtn"
+                                          (click)="decreaseQtyInCart(product)">
+                                          <ion-icon name="remove"></ion-icon> 
+                                      </ion-button>
+                              </ion-avatar> 
+                        </ion-item>
+                        <!--  load more here -->
+                        <ion-infinite-scroll threshold="20%" position="bottom"
+                        (ionInfinite)="loadMore(  $event , category.visibleproducts , category.products , category.loadmorepage , 11  )"
+                        *ngIf="  category.loadmorepage   <  category.products.length  ">
+                            <ion-infinite-scroll-content loadingSpinner="bubbles"
+                                loadingText="Getting more...">
+                              </ion-infinite-scroll-content>
+                        </ion-infinite-scroll>
+                                                          
+                    
+                </swiper-slide>
+    </swiper-container>
+
+ 

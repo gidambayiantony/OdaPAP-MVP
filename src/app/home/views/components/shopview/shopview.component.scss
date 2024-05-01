@@ -1,0 +1,105 @@
+/* Your CSS file */
+
+.center-content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+  
+    .smalltext {
+      font-size: 0.8em;
+      letter-spacing: 0;
+      color: orange;
+    }
+  
+    p {
+      letter-spacing: 2px;
+    }
+  
+    h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+  
+    h6 {
+      color: orange;
+      font-size: 1.0em;
+  
+      .orangetext {
+        color: orange;
+      }
+    }
+  
+    h2 {
+      font-weight: bolder;
+    }
+  }
+  
+  .orangetext {
+    color: #57a3d7;
+  }
+  
+  .main {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    padding: 20px;  /* Add padding to improve card spacing */
+  }
+  
+  ion-segment-button {
+    min-width: 300px;
+    background-color: #57a3d7;
+    border-radius: 20px; // Adjust the border-radius for pill shape
+    margin: 5px; // Adjust margin for spacing between pills
+  
+    &.segment-selected {
+      background-color: #ff9800; // Orange color for the selected pill
+      color: #fff; // Text color for the selected pill
+    }
+  }
+  
+  .chips {
+    text-align: left;
+  
+    ion-label {
+      font-weight: bold;
+    }
+  }
+  .chips-2 {
+  
+    text-align: center;
+  
+    ion-label {
+      font-weight: bold;
+    }
+  }
+  
+  ion-badge {
+    --background: #57a3d7;
+    border-radius: 20px;
+  }
+  
+  .selectTabs {
+    text-align: center;
+  }
+  
+  /* product-card.component.scss */
+  .product-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dist{
+    font-size: small;
+    margin-top: 8px;
+    color: #ff9800;
+  }
+  .custom-icon{
+    font-size: 25px;
+    margin-right: 15px;
+  }
+   

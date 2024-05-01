@@ -1,0 +1,108 @@
+    ion-content{
+        --background:var(--ion-color-white);
+    }
+    ion-item.shopprofileitem {
+            --background:var(--ion-color-primary);
+            --inner-border-width:0px;
+            width: 100%;
+            ion-avatar.logo.bgimg {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                margin: 0px 8px;
+                padding: 0px;
+                --background: var(--ion-color-light);
+                border: 1px solid;
+            }
+        
+            ion-label {
+            ion-row.shopdetails {
+                text-align: left;
+                p {
+                    font-size: 12px;
+                    width: 100%;;
+                }
+        
+                h1 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    width: 100%;;
+                }
+            }
+        
+            ion-row.shopcontacts {
+                 :first-child{
+                    --padding-start:0px;
+                 }
+                ion-button {
+                    margin:0px;
+                    font-size: 12px;
+                    padding: 0px;
+                    --color:var(--ion-color-medium);
+                    ion-icon {
+            
+                    }
+                }
+            }
+            }
+     }
+    
+    ion-segment{
+                position: sticky;
+                top: 0px;
+                width: 100%;
+                background: var(--ion-color-white);
+                ion-segment-button {
+                    ion-label {
+                
+                    }
+                }
+    }
+ 
+
+
+
+    ion-footer {
+        ion-row {
+        ion-col.cancel {
+            h1 {
+                text-align: center;
+                color: var(--ion-color-danger);
+                font-size: 15px;
+            }
+        }
+    
+        ion-col.savebtn {
+            margin: 0px 0px;
+            --padding-start: 7px;
+            --padding-end: 7px;
+            font-size: 13px;
+            --border-radius: 0px;
+            --box-shadow: none;
+            background: var(--ion-color-orange);
+            min-height: 50px;
+            width: 100%;
+            text-align: center;
+     
+            h3 {
+                width: 100%;
+                margin: 0px;
+            }
+    
+            .countslbl{
+                width: auto;
+                margin: 0px auto;
+                text-align: center !important;
+                font-size: 11px;
+                display: inline-block;
+                padding: 0px 6px;
+                p {
+                    font-weight: 600;
+                    font-size: 12px;
+                    padding: 0px;
+                    margin: 0px;
+                }
+            }
+        }
+        }
+    }

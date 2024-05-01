@@ -1,0 +1,117 @@
+
+.stickytabs {
+  position: sticky;
+  top: 4px;
+  background: var(--ion-color-white);
+  padding: 7px;
+  z-index: 999 !important;
+
+  @media (orientation: portrait) {
+    top: 0px !important;
+  }
+}
+
+
+ion-card-subtitle {
+  text-align: center;
+  color: gray;
+  font-size: 13px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 5px;
+}
+
+ion-card-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 5px;
+}
+
+.total-amount {
+  text-align: center;
+  color: orange; /* Text color for currency */
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Style for currency with space */
+.total-amount-currency {
+  color: orange; /* Text color for currency */
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 5px; /* Add space to the right */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+ion-card-subtitle.additional-info {
+  text-align: center;
+  color: grey;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* orderanalysis.component.scss */
+
+.order-analysis-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+  margin-bottom: 20px;
+}
+
+.chart-switcher {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+}
+
+.chart-switcher ion-icon {
+  margin-left: 10px;
+}
+
+.chart-container {
+  position: relative;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chart {
+  width: 48%;
+  margin-bottom: 16px;
+}
+
+#shoppingExpenditureChart {
+  background-color: #e0f2f1;
+}
+
+#orderStatusChart {
+  background-color: #ffcdd2;
+}
+
+.download-buttons button {
+  background-color: orange;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 10px; /* Adjusted margin for spacing between buttons */
+}
+
+.download-buttons button:hover {
+  background-color:  #296EFC; /* Adjusted color on hover */
+}

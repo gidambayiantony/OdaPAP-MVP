@@ -1,0 +1,246 @@
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+ion-content.center-content {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  height: 100vh; /* Take up the full height of the viewport */
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+    border-radius: 50%; /* This makes the button circular */
+  width: 30px; /* Adjust the width and height as needed */
+  height: 30px;
+}
+
+  /* src/app/cart/cart.page.scss */
+ion-content {
+  
+  ion-list {
+    ion-item {
+      ion-buttons {
+        ion-button {
+          margin-bottom: 10px; /* Adjust the margin to separate the buttons */
+
+          &.remove-btn {
+            color: orange; /* Change the color to red or your preferred color */
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Add this to give a fade effect to the confirmation message */
+ion-alert {
+  ion-backdrop {
+    opacity: 0.5;
+  }
+}
+
+/* src/app/cart/cart.page.scss */
+ion-header {
+  ion-toolbar {
+    ion-title {
+      text-align: center; /* Center align the text */
+      font-weight: bold; /* Make the text bold */
+    }
+  }
+}
+
+
+ion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  padding: 20px;
+
+  empty-cart-image {
+    max-width: 30%; /* Adjust the percentage to control the image size */
+    margin-bottom: 20px;
+  }
+
+  .empty-cart-message {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .empty-cart-text {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .start-shopping-btn {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+/* src/app/cart/cart.page.scss */
+
+ion-header {
+  ion-title {
+    font-family: 'Roboto-Regular', 'Helvetica', sans-serif;
+  }
+}
+
+
+  .empty-cart-message,
+  .empty-cart-text,
+  .start-shopping-btn {
+    font-family: 'Roboto-Regular', 'Helvetica', sans-serif;
+  }
+
+/* Add this style to reduce the size of the quantity input */
+.quantity-input {
+  width: 40px; /* Adjust this value as needed */
+  text-align: center;
+  font-family: 'Roboto-Regular', 'Helvetica', sans-serif;
+  margin: 0 5px; /* Add some spacing between the buttons and the input */
+}
+
+.spacer{
+  width: 400px;
+  height: 200px;
+}
+
+
+.product-details {
+  display: block;
+   
+  font-family: 'Roboto-Regular', 'Helvetica', sans-serif;
+  padding: 10px;
+  justify-content: space-between; /* Align items and remove button to opposite ends */
+}
+
+.shop-info {
+  flex: 1;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-info {
+  flex: 2;
+  padding: 0 10px;
+  font-size: 12px !important; /* Set a smaller font size for the entire product-info section */
+}
+
+
+.product-price {
+  font-family: 'Roboto-Regular', 'Helvetica', sans-serif;
+  font-size: 12px; /* Adjust the font size as needed */
+  color: grey;
+}
+
+.product-name {
+  font-size: 12px;
+  font-family: 'Roboto-Regular', 'Helvetica', sans-serif;
+  font-weight: bold;
+}
+
+
+.quantity-container {
+  text-align: center;
+}
+
+.quantity-button {
+  margin: 0 5px; /* Adjust spacing between buttons */
+}
+
+.subtotal-label {
+  font-family: 'Roboto-Regular', 'Helvetica', sans-serif;
+  font-weight: bold;
+  color: grey;
+}
+
+.center-text {
+  text-align: center;
+}
+
+
+.del-cont {
+  text-align: end;
+  margin-left: 100px;
+  font-family: 'Roboto-Regular', 'Helvetica', sans-serif;
+  text-align: right; /* Align Remove button to the right */
+}
+
+
+/* src/app/cart/cart.page.scss */
+
+.rounded-image-container {
+  background-color: #dddddd; /* Grey background color */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure the image stays within the rounded container */
+}
+
+.rounded-image {
+  width: 100%; /* Make the image fill the rounded container */
+  height: auto; /* Maintain the aspect ratio of the image */
+}
+
+
+
+/* CSS for button hover effects */
+.quantity-button:hover,
+.remove-button:hover,
+.checkout-button:hover {
+  background-color: #f0f0f0;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+.shop-name {
+  font-size: 18px;
+  color: grey;
+  margin-bottom: 16px; /* Adjust as needed for spacing */
+}
+
+/* Add this to your global styles.scss file or specific component's SCSS file */
+
+ 
+
+.rounded-image-container {
+  display: flex;
+  justify-content: center; /* Center align the image */
+}
+
+
+.checkout-button {
+  width: 30%; /* Adjust the width as needed */
+  margin: 0 auto; /* Centers the button horizontally */
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+
+
+
+ 

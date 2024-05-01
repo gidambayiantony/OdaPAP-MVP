@@ -1,0 +1,38 @@
+<ion-item button class=" listviewitem  cursor pointer">
+   <ion-avatar slot="start">
+     <ion-img src= {{product.images[0]}} class="bgimage productmedia"></ion-img>
+
+     </ion-avatar>
+  <!-- <ion-avatar slot="start" 
+      (click)="openProduct( )"
+      class="bgimage productmedia" style="background-image: url('{{product.images[0]}}');"> 
+  </ion-avatar> -->
+
+  <ion-label>
+      <div (click)="openProductModal(  )" class="productsdetails">
+              <p class="shopname">
+                  <ion-icon name="storefront-outline"></ion-icon> 
+                  {{product.shopname}}
+              </p>
+              <h2 class="productname">
+                  {{product.catname}}
+              </h2>
+              <p class="descr"> Description </p>
+              <p class="awaydescr"> 
+                  <ion-icon name="location-outline"></ion-icon>
+                  {{product.awaydescr}}
+              </p>
+
+              <ion-badge class="pricebadge">
+                   <span class="currency">{{product.currency}}</span>   {{product.sp | number }}
+                  
+              </ion-badge>
+      </div> 
+  </ion-label>
+  
+
+  <ion-icon slot="end" name="heart" style="color: orange;"></ion-icon>
+
+   
+</ion-item>
+

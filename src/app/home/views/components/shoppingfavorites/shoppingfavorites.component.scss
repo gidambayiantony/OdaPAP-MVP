@@ -1,0 +1,46 @@
+app-tabheader{
+    position: sticky;;
+}
+app-shopslist{
+    width: 100%;
+}
+
+.notfound{
+    width: 100%;
+    background: var(--ion-color-white);
+}
+
+.headeritem{
+    --background:var(--ion-color-white);
+    --inner-border-width:0px;
+    text-align: center;
+
+    ion-card-subtitle{
+        font-size: 13px;
+        font-weight: normal;
+        color:orange;
+    }
+
+    ion-card-title{
+        font-size: 18px;
+        font-weight: bold;
+        color: var(--ion-color-dark);
+    } 
+}
+
+.main {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    padding: 20px;  /* Add padding to improve card spacing */
+  }
+
+  .chips-2 {
+
+    text-align: center;
+  
+    ion-label {
+      font-weight: bold;
+    }
+  }
+  

@@ -1,0 +1,61 @@
+<ion-card-subtitle role="heading" aria-level="3" class="ion-inherit-color ios hydrated">
+  100% more than previous month
+</ion-card-subtitle>
+
+<ion-item class="headeritem">
+  <ion-label class="header-label">
+    <!-- Display the order analysis information -->
+    <ion-card-title role="heading" aria-level="2" class="ion-inherit-color ios hydrated">
+      My Orders Analysis
+    </ion-card-title>
+
+    <!-- Display the total amount -->
+    <div class="total-amount" *ngIf="totalAmount >= 0">
+      <span class="total-amount-currency">Ksh</span>
+      <span class="total-amount-bold">{{ totalAmount > 0 ? totalAmount : '0' }}</span>
+    </div>
+
+    <!-- Additional information -->
+    <ion-card-subtitle role="heading" aria-level="3" class="ion-inherit-color ios hydrated">
+      From any shop you buy with OdaPAP!
+    </ion-card-subtitle>
+  </ion-label>
+</ion-item>
+
+
+
+<!-- orderanalysis.component.html -->
+
+<div class="order-analysis-container">
+  <div class="analysis-container">
+    <h2>Shopping Expenditure Analysis</h2>
+    <div class="chart-switcher">
+      <ion-icon name="bar-chart" (click)="switchChartType('bar')"></ion-icon>
+      <ion-icon name="line-chart" (click)="switchChartType('line')"></ion-icon>
+      <ion-icon name="pie-chart" (click)="switchChartType('pie')"></ion-icon>
+    </div>
+    <div class="chart-container">
+      <canvas id="shoppingExpenditureChart"></canvas>
+    </div>
+    <div class="download-buttons">
+      <button (click)="downloadAnalysis('pdf')">Download as PDF</button>
+      <button (click)="downloadAnalysis('csv')">Download as CSV</button>
+    </div>
+  </div>
+
+  <div class="analysis-container">
+    <h2>Order Status Analysis</h2>
+    <div class="chart-switcher">
+      <ion-icon name="bar-chart" (click)="switchChartType('bar')"></ion-icon>
+      <ion-icon name="line-chart" (click)="switchChartType('line')"></ion-icon>
+      <ion-icon name="pie-chart" (click)="switchChartType('pie')"></ion-icon>
+    </div>
+    <div class="chart-container">
+      <canvas id="orderStatusChart"></canvas>
+    </div>
+    <div class="download-buttons">
+      <button (click)="downloadAnalysis('pdf')">Download as PDF</button>
+      <button (click)="downloadAnalysis('csv')">Download as CSV</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,118 @@
+.cart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -2px; /* Adjust the right position based on your design */
+  background-color: orange; /* Choose your background color */
+  color: white;
+  font-size: 10px; /* Adjust font size based on your design */
+  padding: 4px 8px; /* Adjust padding based on your design */
+}
+
+
+ion-title{
+  text-align: left !important;
+ 
+  strong{
+      color:var(--ion-color-white);
+      span{
+          color:var(--ion-color-orange);
+      }
+  }
+}
+ion-header{ 
+  .space{
+    margin-right: 20px;
+  }
+  .custom-icon{
+    font-size: 20px;
+  }
+  
+  // background: var(--ion-color-primary);
+  // --background: var(--ion-color-primary);
+
+  // ion-toolbar{
+  //     background: var(--ion-color-primary);
+  //     --background: var(--ion-color-primary);
+  // }
+  ion-buttons{
+      ion-button,ion-icon,ion-menu-button{
+          color: var(--ion-color-medium-shade) !important;
+          --color: var(--ion-color-medium-shade) !important;
+      }
+  } 
+
+  ion-avatar{
+      background: var(--ion-color-white);
+  }
+  ion-menu-button{
+      display: block;
+  }
+
+  .backbtn{
+      ion-icon{
+          font-weight: bold;
+          font-size: 34px !important;
+      }
+  }
+
+}
+
+ion-toolbar{
+  
+  ion-avatar{ 
+      // background: var(--ion-color-white);
+      width: 43px;
+      height: 43px;
+      padding: 0px;
+      min-width: 43px;
+      min-height: 43px;
+      // background: var(--ion-color-white);
+  }
+}
+
+
+app-shoppingtabs{
+  width: 100%;
+}
+ion-row,ion-list{
+  width:100%;
+  // display: block;
+}
+
+ion-content{
+  background: var(--ion-color-white);
+  --background: var(--ion-color-white);
+  height: 100%;
+  width:100%; 
+
+  .shophomemenu{
+      width:100%; 
+      background: var(--ion-color-primary);
+       --background: var(--ion-color-primary); 
+  }
+}
+
+
+.noindicator{
+  --indicator-height: 0px;
+}
+
+.subsectionhead{
+  top: 120px !important; 
+  @media (orientation: portrait) {
+      top: 120px !important;
+  }
+}
+
+
+
+
+
+//css for  the  tabs section

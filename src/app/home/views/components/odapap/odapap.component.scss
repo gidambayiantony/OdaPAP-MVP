@@ -1,0 +1,109 @@
+.center-content {
+  .flex-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ion-range {
+      --knob-background: orange;
+      --bar-background-active: orange;
+      margin-left: 10px;
+      width: 200px;
+      .dist {
+        font-weight: bolder;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  .smalltext {
+    font-size: 0.8em;
+    letter-spacing: 0;
+    color: orange;
+  }
+  p {
+    letter-spacing: 2px;
+  }
+  h1 {
+    font-size: 4em;
+    .orangetext {
+      color: orange;
+    }
+  }
+
+  h2 {
+    font-weight: bolder;
+  }
+}
+
+.orangetext {
+  color: #57a3d7;
+}
+.circular-avatar{
+    margin-left: 80px;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px; /* Adjust margin as needed */
+  }
+  
+  .avatar-item {
+    margin-left: 20px;
+    width: 30px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+  }
+  
+  .avatar-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .flex-container{
+    display: flex;
+    justify-content: space-between;
+    h4{
+      color: #57a3d7;
+      cursor: pointer;
+    }
+    h4:hover{
+      color: orange;
+    }
+  }
+
+  /* Assuming this is your main styles file (e.g., styles.scss or app.scss) */
+
+.center-content {
+  font-family: inherit;
+
+  h1 {
+    color: #57a3d7;
+    font-family: inherit;
+  }
+
+  p {
+    font-family: inherit;
+    b {
+      color: orange;
+      font-family: inherit;
+    }
+  }
+
+  h2, h3, h4 {
+    font-family: inherit;
+  }
+
+  ion-range {
+    font-family: inherit;
+  }
+
+  .avatar-container {
+    font-family: inherit;
+  }
+
+  // Add other styles as needed
+}

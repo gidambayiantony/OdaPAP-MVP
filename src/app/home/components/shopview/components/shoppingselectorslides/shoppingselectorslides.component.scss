@@ -1,0 +1,177 @@
+ 
+    .categoriesthumbs {
+        height: auto;
+        width: 100%;
+        max-height: initial;
+        min-height: auto;
+        position: sticky;
+        top: 37px;
+        overflow: visible;
+        z-index: 999;
+        display: block;
+        background: var(--ion-color-white);
+        padding: 8px;
+
+            swiper-slide {
+                    height:50px; 
+                    .slidecategoryitem{
+                        width: 100%; 
+                        --background: var(--ion-color-light);
+                        --inner-border-width:0px;
+                        cursor: pointer;
+                        --border-radius: 6px;
+                        ion-icon{
+                            margin: 0px 7px 0px 0px;
+                            color: var(--ion-color-dark);
+                        }
+                        ion-label{
+                            width: 100%;  
+                            margin: 0px;
+                            h1{
+                                font-size: 16px;
+                                margin: 0px;
+                                color: var(--ion-color-dark);
+                                padding: 0px;
+                                width: 100%;  
+                            }
+                            p{
+                                font-size: 12px;
+                                margin: 0px;
+                                padding: 0px;
+                                width: 100%;  
+                                color: var(--ion-color-medium);
+                            }
+                        }
+                    }
+                   
+                    
+            }
+            .swiper-slide-active{
+                .slidecategoryitem{
+                    --background: var(--ion-color-orange);
+                    *{
+                        color:var(--ion-color-white) !important;
+                    }
+                }
+               
+            }
+    }
+
+    .categorieslistslides {
+        width       : 100%;
+        min-height  : 100%;
+        height      : auto; 
+        swiper-slide {
+            width: 100%;
+            min-height: 100%;
+            height: auto;
+            --background:var(--ion-color-white);
+            .productitem {
+                width: 100%;
+                --background: transparent;
+                --inner-border-width: 0px;
+                --border-width: 0px;
+                --padding-start: 6px;
+                --padding-top: 0px;
+                --padding-bottom: 0px;
+                --inner-padding-top: 0px;
+                ion-avatar.bgimage {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    margin: 0px 6px;
+                    padding: 6px;
+                }
+    
+               .productdetails {
+                        max-width: 100%;
+                        width: 100%;
+    
+                        .productname {
+                            font-size: 16px;
+                            color: var(--ion-color-dark);
+                            font-weight: 500;
+                        }
+                        
+                        .descr{
+                            margin: 0px;
+                            padding: 0px;
+                            color: var(--ion-color-dark-tint);
+                            font-size: 12px;
+                            
+                          .pricebadge {
+                            --background: transparent;
+                            color: var(--ion-color-orange);
+                            padding: 0px;
+                            margin: -2px;
+                                .currency {
+                                    font-size: 12px;
+                                } 
+                                i.uom {
+                                    font-size: 11px;
+                                }
+                            }
+                        }
+                
+                }
+    
+                .qtyadjuster{
+                    width: 40px;
+                    height: 100%;
+                    margin: 0px;
+                    padding: 0px 0px;
+                    text-align: center;
+                    border-radius: 0px;
+            
+                    ion-button{
+                        padding: 0px;
+                        --padding-top: 0px;
+                        --padding-bottom: 0px;
+                        --padding-start: 0px;
+                        --padding-end: 0px;
+                        margin: 0px auto;
+                        --color:var(--ion-color-medium);
+                    }
+                    .favoritebtn{
+                        --background: transparent;
+                        font-size: 14px; 
+                    }
+                    .favorited{ 
+                        --color:var(--ion-color-orange);
+                    }
+            
+                    .increasebtn{
+                        --background:transparent;
+                        color:var(--ion-color-medium);
+                        font-size: 16px;
+                    }
+                    ion-input{ 
+                        --background: var(--ion-color-white);
+                        font-size: 16px;
+                        --padding-start: 0px !important;
+                        --padding-end: 0px !important;
+                        text-align: center;
+                        border: 1px solid var(--ion-color-light);
+                        --inner-padding-start: 0px;
+                        --inner-padding-end: 0px;
+                        min-width: 33px;
+                        margin: 0px;
+                        --padding-bottom: 0px !important;
+                        --padding-top: 0px !important;
+                        --inner-padding-bottom: 0px;
+                        --inner-padding-top: 0px;
+                        min-height: 26px !important;
+                        input{
+                            padding: 0px !important;
+                            text-align: center !important; 
+                        }
+                    }
+                    .decreasebtn{
+                        --background:transparent;
+                        font-size: 16px;
+                        color:var(--ion-color-medium);
+                    }
+                }
+            } 
+        }
+    } 

@@ -1,0 +1,125 @@
+<div
+  class="shopping_app appslide shoppingslide"
+  
+>
+  <ion-split-pane contentId="shoppingmenu" when="shoppingmenu">
+    <ion-menu
+      class="fade-in"
+      mode="md"
+      contentId="shoppingmenu"
+      type="push"
+      class="shoppingmenu"
+      menu-id="shoppingmenu"
+    >
+      <ion-header mode="md">
+        <div class="profile_box">
+          <ion-menu-toggle auto-hide="false">
+            <h3 class="ion-margin-top">Hey,</h3>
+            <h2 class="ion-no-margin" >
+              <!-- {{ shared.profile.username }} -->
+              Olvine George
+            </h2>
+            <p class="ion-no-margin" color="medium">
+              ollygmail.com
+            </p>
+          </ion-menu-toggle>
+        </div>
+      </ion-header>
+
+      <ion-content mode="md" fullscreen mode="ios">
+        <ion-list id="inbox-list" lines="none">
+          <ion-item
+            mode="ios"
+             
+            button
+            class="menuitem shoptoggleitem"
+            lines="none"
+            detail="false"
+          >
+            <ion-label color="medium">
+              <h2>My stores</h2>
+              <p>Manage your stock,sales,orders</p>
+            </ion-label>
+            <ion-button slot="end" size="small">
+              switch
+              <ion-icon
+                name="chevron-forward-outline"
+                color="light"
+                size="small"
+                slot="end"
+              ></ion-icon>
+              <!-- <ion-spinner name="circles" slot="end" color="light"  *ngIf="shared.switching"></ion-spinner> -->
+            </ion-button>
+            <!-- *ngIf="shared.switching" -->
+          </ion-item>
+
+          <ion-menu-toggle
+            auto-hide="false"
+            
+          >
+            <ion-item
+              mode="ios"
+              button
+              class="menuitem"
+               
+              lines="none"
+              detail="false"
+               
+            >
+              <ion-icon
+                slot="start"
+                
+                name="home"
+              ></ion-icon>
+              <ion-label class="text_box">
+                <h2>Title</h2>
+                <h3>Sub title</h3>
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+          <ion-item
+            mode="ios"
+            button
+            class="menuitem"
+           
+            lines="none"
+            detail="false"
+          >
+            <ion-icon slot="start" class="add" name="add-circle"></ion-icon>
+            <ion-label class="text_box">
+              <h2>Add your shop</h2>
+              <h3>
+                Signup for free,sell & manage your stock with zero setup cost.
+              </h3>
+            </ion-label>
+          </ion-item>
+
+          <ion-item
+            mode="ios"
+            button
+            class="menuitem"
+             
+            lines="none"
+            detail="false"
+          >
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-label class="text_box">
+              <h2>Log Out</h2>
+              <h3>now</h3>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+      <ion-footer>
+        <p>
+          © 2024
+          <a href="https://stockapp.africa/" target="_blank">StockApp</a>. All
+          rights reserved.
+        </p>
+      </ion-footer>
+    </ion-menu>
+
+    <ion-router-outlet class="fade-in" id="shoppingmenu" [swipeGesture]="false">
+    </ion-router-outlet>
+  </ion-split-pane>
+</div>

@@ -1,0 +1,216 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-buttons slot="start">
+      <ion-button (click) = "goBack()">
+        <ion-icon class="custom-icon" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
+    <ion-title>
+      <div>
+        <div>
+          <div class="flex-cont">
+            <div>
+              <ion-avatar>
+                <ion-img
+                  class="circular-avatar"
+                  src="{{ selectedShop.logo }}"
+                  alt="Avatar"
+                ></ion-img>
+              </ion-avatar>
+            </div>
+
+            <div class="col">
+              <h3 style="font-weight: bold">{{ selectedShop.name }}</h3>
+              <div class="dist">{{ selectedShop.awaydescr }}</div>
+            </div>
+            <div class="tabs">
+              <ion-segment
+                (ionChange)="segmentChanged($event)"
+                class="transparent-segment"
+              >
+                <ion-segment-button
+                  value="shop"
+                  layout="icon-top"
+                  class="small-segment"
+                >
+                  <ion-icon name="storefront-outline"></ion-icon>
+                  <ion-label class=""> Shop </ion-label>
+                </ion-segment-button>
+
+                <ion-segment-button
+                  value="recents"
+                  layout="icon-top"
+                  class="small-segment"
+                >
+                  <ion-icon name="reload-circle"></ion-icon>
+                  <ion-label class=""> My Recents </ion-label>
+                </ion-segment-button>
+                <ion-segment-button
+                  value="favorites"
+                  layout="icon-top"
+                  class="small-segment"
+                >
+                  <ion-icon name="heart-circle"></ion-icon>
+                  <ion-label class=""> My Favorites </ion-label>
+                </ion-segment-button>
+                <ion-segment-button
+                  value="orders"
+                  layout="icon-top"
+                  class="small-segment"
+                >
+                  <ion-icon name="bag-check"></ion-icon>
+                  <ion-label class=""> My Orders </ion-label>
+                </ion-segment-button>
+                <ion-segment-button
+                  value="odapap"
+                  layout="icon-top"
+                  class="small-segment"
+                >
+                  <ion-icon name="help-outline"></ion-icon>
+                  <ion-label class=""> About </ion-label>
+                </ion-segment-button>
+              </ion-segment>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-icon class="custom-icon" name="search" />
+      <ion-icon class="custom-icon" name="heart" />
+      <div class="cart-container">
+        <ion-icon name="cart" class="space custom-icon"></ion-icon
+        ><ion-badge class="cart-badge">0</ion-badge>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center-content">
+    <h1>Welcome to {{ selectedShop.name }}</h1>
+    <p class="dist">
+      <ion-icon name="location" style="font-size: 20px" />{{
+        selectedShop.awaydescr
+      }}
+    </p>
+
+   
+    <div *ngIf="selectedTab === 'shop'">
+      <div class="chips">
+        <ion-chip
+          (click)="selectCategory('category1')"
+          [color]="selectedCategory === 'category1' ? 'white' : 'light'"
+          [style.background-color]="
+            selectedCategory === 'category1' ? 'orange' : '#CCCCCC'
+          "
+        >
+          <ion-label>All items <ion-badge>0</ion-badge></ion-label>
+        </ion-chip>
+
+        <ion-chip
+          (click)="selectCategory('category2')"
+          [color]="selectedCategory === 'category2' ? 'primary' : 'light'"
+          [style.background-color]="
+            selectedCategory === 'category2' ? 'orange' : '#CCCCCC'
+          "
+        >
+          <ion-label
+            >Phones , Tablets and Accessories <ion-badge>20</ion-badge>
+          </ion-label>
+        </ion-chip>
+
+        <ion-chip
+          (click)="selectCategory('category3')"
+          [color]="selectedCategory === 'category3' ? 'primary' : 'light'"
+          [style.background-color]="
+            selectedCategory === 'category3' ? 'orange' : '#CCCCCC'
+          "
+        >
+          <ion-label>Computing <ion-badge>5</ion-badge></ion-label>
+        </ion-chip>
+
+        <ion-chip
+          shape="round"
+          (click)="selectCategory('category4')"
+          [color]="selectedCategory === 'category4' ? 'primary' : 'light'"
+          [style.background-color]="
+            selectedCategory === 'category4' ? 'orange' : '#CCCCCC'
+          "
+        >
+          <ion-label>Beauty and Cosmetics <ion-badge>2</ion-badge></ion-label>
+        </ion-chip>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div *ngIf="selectedTab === 'shop'">
+      <h2 style="font-weight: bold;">All Products</h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col
+            *ngFor="let productShop of products; let p = index"
+            col-sm="4"
+            col-xs="12"
+            col-md="4"
+          >
+          <a  style="text-decoration: none;" [routerLink] = "['/viewproduct']" >
+            
+            <app-productcard [product]="productShop"></app-productcard>
+
+          </a>
+            <!-- <app-productcard [productName] = "product.name" [productImage]="product.logo"></app-productcard
+        > -->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div *ngIf="selectedTab === 'recents'">
+      <h2 style="font-weight: bold;">Recent products</h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col
+            *ngFor="let productShop of products; let p = index"
+            col-sm="4"
+            col-xs="12"
+            col-md="4"
+          >
+          <a  style="text-decoration: none;" [routerLink] = "['/viewproduct']" >
+            
+            <app-productcard [product]="productShop"></app-productcard>
+
+          </a>
+            <!-- <app-productcard [productName] = "product.name" [productImage]="product.logo"></app-productcard
+        > -->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+       
+    </div>
+    <div *ngIf="selectedTab === 'favorites'">
+      <h2 style="font-weight: bold;">Favorite Products</h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col
+            *ngFor="let productShop of products; let p = index"
+            col-sm="4"
+            col-xs="12"
+            col-md="4"
+          >
+          <a  style="text-decoration: none;" [routerLink] = "['/viewproduct']" >
+            
+            <app-productcard [product]="productShop"></app-productcard>
+
+          </a>
+            <!-- <app-productcard [productName] = "product.name" [productImage]="product.logo"></app-productcard
+        > -->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

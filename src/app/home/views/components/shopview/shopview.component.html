@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-button (click)="dismiss()">
+      <ion-icon class="custom-icon" name="arrow-back"></ion-icon>
+
+    </ion-button>
+  </ion-buttons>
+
+  <ion-title>
+    <div>
+
+      <div>
+         <h2 style="font-weight: bold;">Kivuti Shop</h2>
+      </div>
+      <div class="dist">
+        23km away
+      </div>
+    </div>
+    
+  </ion-title>
+
+  <ion-buttons slot="end" >
+    <ion-icon class="custom-icon" name = "search"/>
+    <ion-icon class="custom-icon" name = "heart"/>
+    <ion-icon class="custom-icon" name = "cart"/>
+
+  </ion-buttons>
+
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="center-content">
+
+    <h1>Welcome to Kivuti shop</h1>
+    <p class="dist">
+      <ion-icon name="location" style="font-size: 20px;"/> 23km away 
+    </p>
+    <div class="chips">
+      <ion-chip
+
+      (click)="selectCategory('category1')"
+      [color]="selectedCategory === 'category1' ? 'white' : 'light'"
+      [style.background-color]="
+        selectedCategory === 'category1' ? 'orange' : '#CCCCCC'
+      "
+
+      
+      >
+        <ion-label>All items <ion-badge>{{products.length}}</ion-badge></ion-label>
+      </ion-chip>
+
+      
+    <ion-chip
+    (click)="selectCategory('category2')"
+    [color]="selectedCategory === 'category2' ? 'primary' : 'light'"
+    [style.background-color]="
+      selectedCategory === 'category2' ? 'orange' : '#CCCCCC'
+    "
+  >
+    <ion-label
+      >Phones , Tablets and Accessories <ion-badge>20</ion-badge>
+    </ion-label>
+  </ion-chip>
+
+  <ion-chip
+    (click)="selectCategory('category3')"
+    [color]="selectedCategory === 'category3' ? 'primary' : 'light'"
+    [style.background-color]="
+      selectedCategory === 'category3' ? 'orange' : '#CCCCCC'
+    "
+  >
+    <ion-label>Computing <ion-badge>5</ion-badge></ion-label>
+  </ion-chip>
+
+  <ion-chip
+    shape="round"
+    (click)="selectCategory('category4')"
+    [color]="selectedCategory === 'category4' ? 'primary' : 'light'"
+    [style.background-color]="
+      selectedCategory === 'category4' ? 'orange' : '#CCCCCC'
+    "
+  >
+    <ion-label>Beauty and Cosmetics <ion-badge>2</ion-badge></ion-label>
+  </ion-chip>
+    </div>
+  </div>
+
+  <div class="main">
+    <ion-grid>
+
+    
+      <ion-row>
+      <ion-col *ngFor="let product of products; let p = index" col-sm="4" col-xs="12"  col-md="4">
+
+        <app-productcard [productName] = "product.productName" [productImage]="product.image"></app-productcard
+      ></ion-col>
+    </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

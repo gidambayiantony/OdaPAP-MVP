@@ -1,0 +1,53 @@
+<div class="center-content">
+ <h1 style="color: #57a3d7;">Oda<span class="orangetext">PAP!</span></h1>
+  <p>
+    Order from any shop and track your expenses effortlessly <br />
+    Order or reserve anything anywhere with
+    <b style="color: orange;">Stock<span class="orangetext">App</span></b>
+  </p>
+  <h2>Enter store Number Or scan code</h2>
+
+  <app-entershopinput></app-entershopinput>
+
+  <h3>Available around here.</h3>
+  <div class="flex-cont">
+    <p class="smalltext">Updating as you move.</p>
+    <div>
+      <ion-range [(ngModel)]="sliderValue" (ionChange)="updateValue($event)">
+        <ion-label class="dist" slot="end">{{ sliderValue }} km </ion-label>
+      </ion-range>
+    </div>
+    <div class="avatar-container">
+      <ion-avatar class="avatar-item">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/000/552/683/non_2x/geo-location-pin-vector-icon.jpg"
+          alt="Avatar 3"
+        />
+      </ion-avatar>
+
+      <ion-avatar class="avatar-item">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/800px-Flag_of_Kenya.svg.png"
+          alt="Avatar 2"
+        />
+      </ion-avatar>
+
+      <ion-avatar class="avatar-item">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl76OShOG7mfdB06lFxF1iHCPSCdYKC32N5Q&usqp=CAU"
+          alt="Avatar 2"
+        />
+      </ion-avatar>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <h2>Top Shops</h2>
+    <h4>See All</h4>
+  </div>
+
+  <app-shopslist>
+
+
+  </app-shopslist>
+</div>

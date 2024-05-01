@@ -1,0 +1,146 @@
+/* Add the global styles in your global stylesheet (styles.scss or styles.css) */
+
+app-tabheader {
+  position: sticky;
+}
+
+app-shopslist {
+  width: 100%;
+}
+
+.notfound {
+  width: 100%;
+  background: var(--ion-color-white);
+}
+
+.headeritem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  ion-card-subtitle {
+    font-size: 13px;
+    font-weight: normal;
+    color: orange;
+  }
+
+  ion-card-title {
+    font-size: 18px;
+    font-weight: bold;
+    
+  }
+}
+
+ion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-logo {
+  max-height: 100px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.recent-around {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 0 20px;
+  margin: -20px 0;
+}
+
+.recent-card {
+  scroll-snap-align: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .frame {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .seller-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  .details {
+    flex: 1;
+  }
+
+  h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+    font-weight: bold; /* Make the shop name bold */
+    color: black; /* Set the shop name text color to black */
+  }
+
+  p {
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 3px;
+  }
+
+  .category {
+    font-size: 14px;
+    color: #296EFC;
+    margin-bottom: 3px;
+  }
+
+  .enter-button {
+    margin-top: 5px;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: background-color 0.3s ease; /* Smooth transition for color change */
+  
+    ion-icon {
+      margin-right: 5px;
+      color: orange;
+      font-size: 28px; /* Increase the icon size */
+    }
+  
+    text-transform: none; /* Set text-transform to none to display as entered */
+  
+    &:hover,
+    &:active {
+      background-color: orange; /* Change the background color on hover or click */
+    }
+  }
+  
+
+
+}
+.main {
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  padding: 20px;  /* Add padding to improve card spacing */
+}
+.chips-2 {
+
+  text-align: center;
+
+  ion-label {
+    font-weight: bold;
+  }
+}

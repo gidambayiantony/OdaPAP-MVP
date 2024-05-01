@@ -1,0 +1,35 @@
+.product-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    ion-icon{
+        font-size: 1.5em;
+        .cart{
+            --color: orange;
+        }
+    }
+  }
+
+  .price{
+    color: orange;
+  }
+  .distance{
+    color: #57a3d7;
+  }
+  .store{
+    font-weight: bold;
+  }
+
+  /* app-productcard.component.scss */
+
+ion-img {
+  cursor: pointer;
+}
+.cart{
+  cursor: pointer;
+}

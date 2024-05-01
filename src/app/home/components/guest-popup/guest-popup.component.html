@@ -1,0 +1,14 @@
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label style="text-align: center;">
+        <span style="color: orange;">Hello,</span><br>
+        Do you want to sign up or login?
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)="login()">Login</ion-button>
+  <ion-button (click)="signup()">Sign Up</ion-button>
+  <ion-button (click)="logout()" *ngIf="isUserLoggedIn">Logout</ion-button>
+</ion-content>

@@ -1,0 +1,136 @@
+.listviewitem{ 
+    ion-avatar{
+        margin-right: 20px;
+    }
+    width: 100%;
+    border-radius: 6px ;
+    --inner-border-width: 0px ;
+    --border-width: 0px;
+    margin: 3px auto ;
+    --padding-start: 6px ; 
+    --inner-padding-start: 0px ; 
+    color: var(--ion-color-dark);
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+    background: var(--ion-color-light-tint); 
+    --background: var(--ion-color-light-tint);
+    border:1px solid var(--ion-color-light);
+    &:hover{
+        border:1px solid var(--ion-color-orange);
+        .productname,.descr, .awaydescr{
+            color: var(--ion-color-dark);
+        }
+        ion-icon{
+            color: var(--ion-color-orange);
+        }
+    }
+    ion-skeleton-text{
+        float:left;
+    }
+
+    .productmedia{  
+        width: 40px;
+        height: 40px;
+        padding: 0px;
+        background-color: var(--ion-color-light);
+        margin: 0px 6px 0px 12px; 
+        margin-right: 100px;
+    }
+
+    ion-label{
+        // margin: 0px;
+        .productsdetails{
+            ion-icon{
+                font-size   : 10px;
+            }
+            .shopname{
+                font-size: 12px;
+                font-weight: normal;
+                color:#57A3D7;
+            }
+            .productname{
+                font-weight: bold;
+                display: flex;
+                margin:0px;
+                font-size: 14px;
+                padding: 0px;
+            }
+           
+            
+            .descr{
+                font-size: 11px;
+                font-weight: normal;
+                white-space: nowrap; 
+            }
+            .awaydescr{
+                font-size: 10px;
+                text-transform: capitalize;
+            }
+            .pricebadge{
+                background: transparent;
+                float: left;
+                max-height: 20px;
+                color: orange;
+                margin-top: 0px;
+                font-size: 12px;
+                font-weight: 300;
+                .uom{
+
+                }
+            }
+        }
+        
+        
+
+    }
+
+    .cartthings{
+        width: 40px;
+        height: 100%;
+        margin: 0px;
+        padding: 0px 9px;
+        text-align: center;
+        border-radius: 0px;
+
+        ion-button{
+            padding: 0px;
+            --padding-top: 0px;
+            --padding-bottom: 0px;
+            --padding-start: 0px;
+            --padding-end: 0px;
+            margin: 0px auto;
+            --color:var(--ion-color-medium);
+        }
+        .favoritebtn{
+            --background: transparent;
+            font-size: 14px; 
+        }
+        .favorited{ 
+            --color:var(--ion-color-orange);
+        }
+
+        .increasebtn{
+            --background:transparent;
+            color:var(--ion-color-medium);
+            font-size: 16px;
+        }
+        ion-input{ 
+                --background: var(--ion-color-white);
+                font-size: 16px;
+                --padding-start: 0px !important;
+                --padding-end: 0px !important;
+                text-align: center;
+                border: 1px solid var(--ion-color-light);
+
+            input{
+                padding: 0px;
+                text-align: center;
+            }
+        }
+        .decreasebtn{
+            --background:transparent;
+            font-size: 16px;
+            color:var(--ion-color-medium);
+        }
+    }
+}

@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click) = "goBack()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Nike Shoes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col col-12 col-md-6 class="ion-padding">
+        <div class="product-image">
+          <img
+            (load)="onImageLoad()"
+            [hidden]="!imageLoaded"
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
+        </div>
+        <div class="split-row">
+          <div>
+            <h2 class="ion-text-wrap">NIKE shoes</h2>
+            <h3 class="ion-text-wrap">1223 Kes /=</h3>
+          </div>
+          <div>
+            <ion-button (click)="addProduct()">
+            <h3 class="cart ion-text-right">
+              Add to cart <ion-icon name="cart"></ion-icon>
+            </h3>
+          </ion-button>
+          </div>
+        </div>
+        <div class="product-description ion-text-wrap">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget justo ut felis malesuada feugiat. Nulla facilisi. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.
+          </p>
+          <p>
+            Quisque congue faucibus sapien, in bibendum purus ultricies ac. Nunc sit amet justo non enim lacinia fermentum. Integer et volutpat ligula. Fusce vel efficitur nulla. In non tellus vel ligula dapibus ultrices vel at dolor.
+          </p>
+        </div>
+      </ion-col>
+
+      <ion-col col-12 col-md-6>
+        <ion-card class="custom-card">
+          <ion-card-header>
+            <div class="split-row">
+              <ion-card-title>Shop Details</ion-card-title>
+              <ion-button (click)="goBack()" slot="end">
+                <ion-icon slot="icon-only" name="storefront-outline"></ion-icon>
+               <span class="shop-label">View Shop</span> 
+            </ion-button>
+            </div>
+          
+          </ion-card-header>
+          <ion-card-content>
+            <p><strong>Description:</strong> Walk Like You Own The Ground.</p>
+            <p><strong>Location:</strong> CameraFashion, Camera Clothes, XPH9+7P Mombasa, Kenya</p>
+          </ion-card-content>
+        </ion-card>
+        <div class="split-row">
+          <h2>Similar items from this shop</h2>
+          <h2 class="viewall ion-text-right">
+            View All <ion-icon name="arrow-forward" class="arrow-icon"></ion-icon>
+          </h2>
+        </div>
+        <ion-row>
+          <ion-col col-12 class="product-grid-col">
+            <!-- Your product grid goes here -->
+            <div *ngFor="let product of products" class="product-grid-item">
+              <app-productcard [product]="product"></app-productcard>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

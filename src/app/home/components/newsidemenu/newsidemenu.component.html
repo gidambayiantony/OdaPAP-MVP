@@ -1,0 +1,45 @@
+ <ion-content side="start" class="menu-container">
+  <div class="content-wrapper">
+ 
+
+  <div class="menu-content">
+     
+
+    <!-- Shop List Section -->
+    <!-- <div class="shops">
+      
+    <ion-list class="shop-list">
+      <ion-item *ngFor="let shop of shops">
+        <ion-avatar slot="start">
+          <img src="{{ shop.logo }}" alt="Shop Logo">
+        </ion-avatar>
+        <ion-label>
+          <h2 class="shop-name">{{ shop.name }}</h2>
+          <p class="shop-details">{{ shop.details }}</p>
+        </ion-label>
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+    </ion-list>
+  </div> -->
+
+    <!-- Menu List Shortcut Section -->
+    <div class="menu-shortcut-list">
+
+      <ion-item button  *ngFor="let shortcut of menuitems" (click) = "navigate(shortcut.page)">
+        <div class="group"> 
+        <ion-icon   [name]="shortcut.icon"></ion-icon>
+        <ion-label>{{ shortcut.title }}</ion-label>
+      </div>
+      </ion-item>
+    </div>
+
+    
+  </div>
+</div>
+ 
+   
+  </ion-content>
+ 
+ 
+
+ 

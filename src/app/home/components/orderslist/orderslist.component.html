@@ -1,0 +1,117 @@
+
+<ion-item class="headeritem">
+  <ion-label class="header-label">
+    <!-- Display the order count -->
+    <div class="order-count">
+      {{ orderCount }} Found, Track Your Orders & Purchases History
+    </div>
+
+
+    <ion-card-title>
+      My Orders History
+    </ion-card-title>
+  </ion-label>
+</ion-item>
+
+
+<!-- Display the total amount -->
+<div class="total-amount" *ngIf="totalAmount >= 0">
+  <span class="total-amount-label"></span>
+  <div class="total-amount-values">
+    <span class="total-amount-currency">Ksh</span>
+    <span class="total-amount-bold">{{ totalAmount > 0 ? totalAmount : '0' }}</span>
+  </div>
+</div>
+
+
+<ion-item class="filteritem">
+<ion-label>
+<ion-select 
+  label="Filter by" 
+  label-placement="stacked" 
+  aria-label=""
+  fill="outline"
+  mode="md" 
+  position="stacked" 
+  value="all"
+  (ionChange)="filterOrders($event.detail.value)"
+  interface="popover" 
+  placeholder="Select option">
+  <ion-select-option value="all">All</ion-select-option>
+  <ion-select-option value="pending">Pending</ion-select-option>
+  <ion-select-option value="confirmed">Confirmed</ion-select-option>
+  <ion-select-option value="delivering">Delivering</ion-select-option>
+  <ion-select-option value="delivered">Delivered</ion-select-option>
+  <ion-select-option value="declined">Declined</ion-select-option>
+</ion-select>
+</ion-label>
+</ion-item>
+
+<div *ngIf="orderCount > 0 " >
+
+  <div class="centercontent">
+    <ion-list  >
+      <ion-row>
+          <ion-col 
+          class="shopitemcol" 
+          size-sm="12" size-xs="12" size-md="4" size-lg="3" size-xl="3"
+          *ngFor=" let store of   selectedProducts;  let p= index;  " 
+          >
+       
+        <ion-item 
+        button 
+        mode="ios"  
+         
+        class="shopitem">
+        <ion-avatar slot="start" class="bgimg"
+             >
+             <ion-icon name="bag-handle-outline" /> 
+            <!-- <ion-img src= {{store.logo}}></ion-img> -->
+        </ion-avatar>
+        <ion-label>
+            <p class="dist">Monday, March 12 2024 </p>
+            <h6 style="font-size: smaller;">From {{store.name}}</h6>
+            <div class="flex-cont">
+             
+              <p class="descr">10 items</p>
+               <!-- <ion-button  >
+             
+            Total
+        </ion-button> -->
+              
+            </div>
+            <p class="dist">Pending</p>
+
+           
+            
+        </ion-label>
+        
+        <ion-button  >
+            
+            Total
+        </ion-button>
+        </ion-item>
+      
+             
+          </ion-col>
+      </ion-row> 
+    </ion-list>
+    </div>
+
+<!-- <app-shopslist /> -->
+
+</div>
+
+
+
+
+  
+
+
+
+<!-- Display "No Order Found" if no order history -->
+<div class="no-order-found" *ngIf="orderCount === 0">
+<ion-img class="shopping-icon" src="https://png.pngtree.com/png-clipart/20210711/original/pngtree-no-result-search-icon-png-image_6511543.jpg" alt="No Order Found"></ion-img>
+<p class="no-order-text">No Order Found</p>
+<p class="additional-text">Add items to your cart to place an order.</p>
+</div>

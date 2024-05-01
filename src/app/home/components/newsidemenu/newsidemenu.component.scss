@@ -1,0 +1,117 @@
+
+ 
+.menu-header {
+  --ion-background-color: #4069e2;
+  .logo-container{
+    height: 50px;
+    width: 50px;
+ 
+  }
+  
+}
+.menu-container {
+  --ion-background-color: #4069e2;
+ 
+  
+}
+ 
+.head-wrap{
+  display: flex;
+  align-items: center;
+  margin-left: 1.5em;
+}
+ 
+
+.group{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ion-icon{
+    margin-right: 19px;
+    font-size: 1.5em;
+  }
+
+}
+.group:hover{
+  color: orange;
+   
+}
+
+.menu-title {
+ 
+  size: 1em;
+  margin-left: 12px;
+}
+
+.menu-content {
+   
+    
+
+  // .profile-section,
+  // .shop-list,
+  // .menu-shortcut-list {
+  //   min-height: 300px;
+  //   overflow-y: auto;
+  // }
+
+  .profile-section {
+    align-items: center;
+  }
+
+  .shop-name {
+    font-weight: bold;
+  }
+  .shop-details{
+    color: orange;
+  }
+
+  .data-usage {
+    color: white;
+    .title{
+      font-size: 1.5em;
+    }
+    .subtitle{
+      font-size: 12px;
+    }
+
+    ion-progress-bar {
+      --ion-progress-bar-background: #000;
+      --ion-progress-bar-background-clip: border-box;
+      --ion-progress-bar-background-color: #000;
+    }
+  }
+}
+.logout-container{
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  .profile-photo{
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
+    border-radius: 50%; /* Make it circular */
+    background-color: red; /* Change the background color */
+  }
+  .logout-text{
+    margin-left: 8px;
+    margin-right: 12px ;
+  }
+  .logout-icn{
+    font-size: 24px;
+    margin-left: 12px;
+    color: orange;
+    ion-icon{
+      font-size: 1.5em;
+    }
+  }
+}
+
+.menu-footer {
+  --ion-background-color: #4069e2;
+  
+
+ 
+  .logout-icon{
+    margin-top: 10px;
+  }
+}

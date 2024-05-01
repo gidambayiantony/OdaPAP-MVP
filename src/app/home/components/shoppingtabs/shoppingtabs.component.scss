@@ -1,0 +1,137 @@
+
+.slider-container {
+  padding: 16px; // Add padding to separate the slider from other elements
+}
+
+ion-range {
+  width: 100%;
+}
+
+.shoppingtabsrow {
+  .row-cont{
+    display: flex;
+  }
+  overflow: auto;
+  display: block;
+  // --background    :   red;
+  // background      :   red;
+}
+// Add this style to your global styles or the component's SCSS
+ion-segment-button.segment-checked {
+  --color: orange; // Adjust the color as needed
+}
+
+ion-segment {
+  padding: 7px 0px 0px;
+  text-align: left;
+  max-width: 900px;
+  margin: 0px auto !important;
+  zoom: 0.8;
+  //
+ 
+  ion-segment-button {
+    // min-width: 120px !important;
+    // max-width: 120px !important;
+    text-align: center;
+    color: var(--ion-color-white) !important;
+    --color: var(--ion-color-white) !important;
+
+    ion-label {
+      text-transform: capitalize;
+
+      padding-left: 6px;
+      i {
+        float: left;
+        font-size: 9px;
+        width: 100%;
+        font-weight: 400;
+        line-height: 6px;
+        color: #57a3d7;
+      }
+    }
+  }
+}
+
+.activetab {
+  // border-radius: 9px;
+  // margin: 6px 0px 0px 0px;
+  // max-height: 34px;
+  // border: 0px;
+  --indicator-color: var(--ion-color-orange);
+  --indicator-height: 3px;
+  // --padding-end: 5px;
+  ion-label {
+    color: var(--ion-color-orange) !important;
+    span {
+      color: var(--ion-color-orange) !important;
+    }
+  }
+  ion-icon {
+    color: var(--ion-color-orange) !important;
+    --color: var(--ion-color-orange) !important;
+    // font-size: 16px;
+  }
+}
+
+/*Any Mobile Device*/
+@media only screen and (max-width: 369px) {
+  .desktopview {
+    display: none;
+  }
+  ion-segment {
+    zoom: 0.89;
+    ion-segment-button {
+      --padding-start: 6px;
+      --padding-end: 6px;
+      text-align: center;
+      ion-icon {
+        font-size: 28px;
+      }
+      ion-label {
+        font-size: 7px;
+        padding-left: 0px;
+        i {
+          font-size: 5px;
+        }
+      }
+    }
+  }
+}
+/*Tablets Device*/
+@media only screen and (max-width: 991px) {
+  .desktopview {
+    display: none;
+  }
+}
+/*ipad Pro  Device*/
+@media only screen and (max-width: 1024px) {
+}
+/*large  Device*/
+@media only screen and (max-width: 1200px) {
+}
+
+// Your existing styles...
+
+ion-footer {
+  ion-row {
+    ion-segment {
+      // Default styles for larger screens
+      // Adjust as needed for your design
+      margin: 0 auto;
+      max-width: 800px;
+
+      // Responsive styles for smaller screens
+      @media (max-width: 767px) {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+
+        ion-segment-button {
+          // Adjust styles for smaller screens
+          // For example, you may want to reduce padding or font size
+        }
+      }
+    }
+  }
+}

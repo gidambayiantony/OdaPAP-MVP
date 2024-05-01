@@ -1,0 +1,195 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Nike Shoes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-no-padding">
+      <ion-col class="img-cont ion-no-padding" size="6">
+        <div>
+          <ion-skeleton-text
+            class="skeleton-image"
+            animated
+            [hidden]="imageLoaded"
+          ></ion-skeleton-text>
+          <div class="product-image">
+            <img
+              (load)="onImageLoad()"
+              [hidden]="!imageLoaded"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div class="split-row">
+            <div>
+              <h2>NIKE shoes</h2>
+              <h3>1223 Kes /=</h3>
+            </div>
+            <div>
+              <h3 class="cart">
+                Add to cart <ion-icon name="cart"></ion-icon>
+              </h3>
+            </div>
+          </div>
+
+          <div class="product-description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              eget justo ut felis malesuada feugiat. Nulla facilisi. Donec
+              venenatis, turpis vel hendrerit interdum, dui ligula ultricies
+              purus, sed posuere libero dui id orci.
+            </p>
+            <p>
+              Quisque congue faucibus sapien, in bibendum purus ultricies ac.
+              Nunc sit amet justo non enim lacinia fermentum. Integer et
+              volutpat ligula. Fusce vel efficitur nulla. In non tellus vel
+              ligula dapibus ultrices vel at dolor.
+            </p>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Shop Details</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>**Description:** Walk Like You Own The Ground.</p>
+            <p>
+              **Location:** CameraFashion, Camera Clothes, XPH9+7P Mombasa,
+              Kenya
+            </p>
+          </ion-card-content>
+        </ion-card>
+        <div class="split-row">
+          <h2>Similar items from this shop</h2>
+          <h2 class="viewall">
+            View All
+            <ion-icon name="arrow-forward" class="arrow-icon"></ion-icon>
+          </h2>
+        </div>
+        <ion-row>
+          <ion-col col-sm="4" col-xs="12" col-md="4">
+            <swiper-container
+              #swiperEX
+              initial-slide="0"
+              [navigation]="true"
+              [pagination]="{ type: 'bullets', clickable: 'true' }"
+              autoplay="true "
+              [slidesPerView]="2"
+              [loop]="true"
+            >
+              <swiper-slide *ngFor="let product of products; let p = index">
+                <app-productcard
+                  [productName]="product.name"
+                  [productImage]="product.logo"
+                />
+              </swiper-slide>
+            </swiper-container>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content> -->
+
+<!-- anothee -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Nike Shoes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-align-items-center ion-justify-content-center">
+      <ion-col col-12 col-md-6 class="ion-padding">
+        <ion-skeleton-text class="skeleton-image" animated [hidden]="imageLoaded"></ion-skeleton-text>
+        <div class="product-image">
+          <img
+          (load)="onImageLoad()"
+          [hidden]="!imageLoaded"
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+        />
+        </div>
+        <div class="split-row">
+          <div>
+            <h2 class="ion-text-wrap">NIKE shoes</h2>
+            <h3 class="ion-text-wrap">1223 Kes /=</h3>
+          </div>
+          <div>
+            <h3 class="cart ion-text-right">
+              Add to cart <ion-icon name="cart"></ion-icon>
+            </h3>
+          </div>
+        </div>
+        <div class="product-description ion-text-wrap">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget justo ut felis malesuada feugiat. Nulla facilisi. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero dui id orci.
+          </p>
+          <p>
+            Quisque congue faucibus sapien, in bibendum purus ultricies ac. Nunc sit amet justo non enim lacinia fermentum. Integer et volutpat ligula. Fusce vel efficitur nulla. In non tellus vel ligula dapibus ultrices vel at dolor.
+          </p>
+        </div>
+      </ion-col>
+      <ion-col col-12 col-md-4>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Shop Details</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p><strong>Description:</strong> Walk Like You Own The Ground.</p>
+            <p><strong>Location:</strong> CameraFashion, Camera Clothes, XPH9+7P Mombasa, Kenya</p>
+          </ion-card-content>
+        </ion-card>
+        <div class="split-row">
+          <h2>Similar items from this shop</h2>
+          <h2 class="viewall ion-text-right">
+            View All <ion-icon name="arrow-forward" class="arrow-icon"></ion-icon>
+          </h2>
+        </div>
+        <ion-row>
+          <ion-col col-sm="4" col-12 col-md-4 class="swiper-container-col">
+            <swiper-container
+              #swiperEX
+              initial-slide="0"
+              [navigation]="true"
+              [pagination]="{ type: 'bullets', clickable: 'true' }"
+              autoplay="true"
+              [slidesPerView]="1"
+              [loop]="true"
+            >
+              <swiper-slide *ngFor="let product of products; let p = index">
+                <app-productcard [productName]="product.name" [productImage]="product.logo"></app-productcard>
+              </swiper-slide>
+            </swiper-container>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<style>
+  /* Add your global styles here */
+
+  /* Media query for larger screens */
+  @media only screen and (min-width: 768px) {
+    .swiper-container-col {
+      max-width: 300px; /* Adjust the max-width according to your layout */
+    }
+  }
+</style>

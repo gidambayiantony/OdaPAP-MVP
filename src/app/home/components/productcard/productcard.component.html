@@ -1,0 +1,46 @@
+ 
+
+<ion-card style="margin-top: 10px;width: 250px;">
+  <!-- Product Image -->
+  <ion-img
+  class="product-image"
+  (click)="navigateToProductDetails()"
+    src={{product.image}}
+    alt="Product Image"
+  ></ion-img>
+
+  <ion-card-content>
+    <!-- Product Name -->
+    <ion-card-title>{{product.productName}}</ion-card-title>
+
+    <!-- Favorite and Cart Icons -->
+    <ion-row class="ion-align-items-center icons">
+      <div class="price">
+        kes 350
+      </div>
+
+      <div>
+      <ion-col size="1">
+        
+        <ion-icon
+        (click) = "addToFav()"
+          name="heart"
+          [color]="product.isFavorite ? 'danger' : 'medium'"
+        ></ion-icon>
+      </ion-col>
+      <ion-col size="1"
+      
+      >
+        <ion-icon 
+        (click) = "addToCartClicked()"
+        class="cart" name="cart" [color]="isInCart ? 'secondary' : 'medium'"></ion-icon>
+      </ion-col>
+    </div>
+    </ion-row>
+
+    <!-- Distance Text -->
+    <ion-text color="medium">
+     <span class="store">{{product.shopname}}</span> <p class="distance">{{product.awaydescr}}</p>
+    </ion-text>
+  </ion-card-content>
+</ion-card>

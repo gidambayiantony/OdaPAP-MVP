@@ -1,0 +1,169 @@
+/* cart-item.component.scss */
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .product-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .block-cont{
+    display: block;
+    padding-right: 8px;
+  }
+  .product-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-name {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .quantity-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .quantity {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+  
+  .price-section {
+    text-align: right;
+  }
+  
+  .price {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .remove-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .del-cont{
+    display: block;
+  }
+
+  
+  /* src/app/cart/cart.page.scss */
+ion-content {
+    ion-list {
+      ion-item {
+        .descr{
+            margin-left:18px;
+            padding: 12px
+
+
+
+
+
+
+            
+        }
+        ion-buttons {
+          ion-button {
+            margin-bottom: 10px; /* Adjust the margin to separate the buttons */
+  
+            &.remove-btn {
+              color: orange; /* Change the color to red or your preferred color */
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* Add this to give a fade effect to the confirmation message */
+  ion-alert {
+    ion-backdrop {
+      opacity: 0.5;
+    }
+  }
+  
+  /* src/app/cart/cart.page.scss */
+  ion-header {
+    ion-toolbar {
+      ion-title {
+        text-align: center; /* Center align the text */
+        font-weight: bold; /* Make the text bold */
+      }
+    }
+  }
+  
+  
+  ion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+  
+    empty-cart-image {
+      max-width: 30%; /* Adjust the percentage to control the image size */
+      margin-bottom: 20px;
+    }
+  
+    .empty-cart-message {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  
+    .empty-cart-text {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  
+    .start-shopping-btn {
+      background-color: orange;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    

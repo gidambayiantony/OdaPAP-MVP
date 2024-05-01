@@ -1,0 +1,78 @@
+// Add this style to your global styles or the component's SCSS
+ion-input {
+    --placeholder-color: black;  // Replace with the desired color
+  }
+  
+
+.scanitem{
+    width: 100%;
+    max-width: 400px;
+    --inner-border-width: 0px;
+    --padding-bottom: 0px;
+    --padding-top: 0px;
+    --inner-padding-bottom: 0px;
+    --inner-padding-top: 0px;
+    --padding-start: 0px;
+    --inner-padding-start: 0px;
+    margin: 11px auto;
+    --padding-end: 0px;
+    --inner-padding-end: 0px;
+    border-radius: 33px;
+    --background: var(--ion-color-white);
+    top: 6px;
+    position: sticky;
+    z-index: 9999;
+    ion-avatar{
+        padding: 1px;
+        margin: 3px;
+        ion-icon{
+            font-size: 33px;
+        }
+    }
+
+    ion-badge{
+        --background: transparent;
+        color: var(--ion-color-medium-shade);
+        --padding-end: 0px;
+        --padding-start: 0px;
+        span{
+            padding: 11px;
+            float: left;
+        }
+
+    }
+
+
+    ion-input{
+        --padding: 12px;
+        max-width: 98%;
+        border: none;
+        --border-width: 0px !important;
+        --background: #edf2ff;
+        color:black;
+        --border-radius: 28px;
+        input{
+            min-height: 47px !important; 
+        }
+    }
+    ion-button{
+        text-transform: capitalize;
+        --padding-end: 11px;
+        --padding-start: 11px;
+        --margin-end: 0px;
+        --inner-padding-end: 0px;
+        --inner-padding-start: 0px;
+        --background: orange;
+        color: white;
+        position: absolute;
+        right: 11px;
+        z-index: 9;
+    }
+}
+@media (orientation:portrait) {
+    .scanitem{
+        max-width: 96%;
+        top: -1px;
+        --background: var(--ion-color-white);
+    }
+}

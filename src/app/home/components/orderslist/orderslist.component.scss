@@ -1,0 +1,391 @@
+/* shopping-order.component.scss */
+
+
+.centercontent{
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+}
+ion-list{
+  padding: 0px 10px;
+}
+.flex-cont{
+  display: flex;
+  justify-content: space-between;
+}
+
+.shopitemcol{  
+  padding: 12px; 
+  ion-item{
+      width:100%;
+  }
+}
+
+.shopitem{
+  // margin :  12px auto ;
+  display: inline-flex;
+  width  :  100%; 
+  --padding-start: 9px;
+  --padding-end: 9px;
+  --inner-padding-end: 5px; 
+  color: var(--ion-color-white) p, h3;
+  background: var(--ion-color-light);
+  --border-radius: 3px;
+  border-radius: 33px;
+  --padding-top: 3px;
+  --padding-bottom: 3px;
+  p,h3{
+      color:var(--ion-color-dark);
+      text-align: left ;
+  }
+
+  .descr{
+    color: orange;
+    font-size: smaller;
+  }
+
+  p{
+      color: var(--ion-color-dark-shade);
+      white-space: nowrap;
+  }
+  h3{
+      font-weight: bold;
+  }
+  ion-label{ 
+      padding: 6px 0px ;
+      margin: 0px; 
+      .dist{
+          font-size: 0.6em;
+          display: flex;
+      }
+      
+  }
+
+  ion-button{
+      --background:orange
+  }
+}
+@media (orientation: portrait) {
+  .shopitem{
+      --padding-end: 13px;
+      --inner-padding-end: 0px;
+      --padding-start: 0px;
+      --inner-padding-start: 0px;
+  }
+}
+.stickytabs {
+    position: sticky;
+    top: 4px;
+    background: var(--ion-color-white);
+    padding: 7px;
+    z-index: 999 !important;
+  
+    @media (orientation: portrait) {
+      top: 0px !important;
+    }
+  }
+  
+  ion-segment {
+    max-width: 200px;
+    margin: 0px auto;
+  }
+  
+  ion-card-title {
+    font-size: 21px;
+  }
+  
+  .headeritem {
+    --background: var(--ion-color-white);
+    --inner-border-width: 0px;
+    text-align: center;
+  
+    ion-card-subtitle {
+      font-size: 13px;
+      font-weight: normal;
+      color: orange;
+    }
+    ion-card-title {
+      font-size: 18px;
+      font-weight: bold;
+      // color: var(--ion-color-dark);
+    }
+  
+    ion-icon.icon {
+      color: var(--ion-color-primary);
+      margin-right: 5px;
+      font-size: 28px; 
+    }
+  }
+  
+  ion-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  ion-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  ion-item {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+  }
+  
+  ion-item ion-thumbnail {
+    margin-right: 10px;
+  }
+  
+  ion-item ion-label {
+    width: calc(100% - 70px);
+  }
+  
+  ion-item ion-label h2,
+  ion-item ion-label p {
+    padding: 5px 0;
+  }
+  
+  app-orderslist,
+  app-orderanalysis {
+    width: 100%;
+  }
+  
+  
+  
+  .order-details {
+    text-align: center;
+  }
+  
+  .order-details h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: black;
+  }
+  
+  .order-details p.orange-text {
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  
+  /* Modify the styling for .filteritem */
+  .filteritem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 170px; /* Adjust the maximum width to make it smaller */
+    width: 100%; /* Ensure it takes full width */
+  }
+  
+  ion-select {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+
+  
+  /* Add this styling for the order count */
+  .order-count {
+    text-align: center;
+    color: grey;
+    font-size: 15px; /* Adjust the font size to 16px */
+    margin-top: 10px;
+  }
+  
+  /* Center align the total amount */
+  .total-amount {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Style for label "Total Amount:" */
+  .total-amount-label {
+    color: black; /* Text color for the label */
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Style for currency with space */
+  .total-amount-currency {
+    color: orange; /* Text color for currency */
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 5px; /* Add space to the right */
+  }
+  
+  /* Style for bold total amount */
+  .total-amount-bold {
+    color: orange; /* Text color for amount */
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px; /* Add space below the amount */
+  }
+  
+  .no-order-found {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    margin-top: 30px; /* Increase the margin-top value as needed */
+  }
+  
+    .no-order-icon {
+      font-size: 60px;
+      margin-bottom: 5px; /* Reduced margin */
+      color: var(--ion-color-orange);
+    }
+  
+    .no-order-text {
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 2px; /* Reduced margin */
+    }
+  
+   
+    .additional-text {
+      font-size: 13px;
+      color: #555;
+      margin-top: 5px; /* Reduced margin */
+    }
+  
+    .shopping-icon {
+      width: 100px; /* Adjust the width as needed */
+      height: auto; /* Maintain aspect ratio */
+      margin-bottom: 10px;
+    }
+
+    
+  
+  
+    $primary-color: #2196F3;
+    $text-color: #333;
+    // $card-background: #F5F5F5;
+    
+    $order-card-height: 170px; // Adjust the height as needed
+    $order-card-border-radius: 8px; // Adjust the border-radius as needed
+    
+    /* Updated code */
+    ion-list.circular-stack {
+      display: flex;
+      justify-content: center;
+    }
+    
+    ion-item.stacked-item {
+      text-align: center;
+    }
+    
+     
+    
+    .order-card {
+      // background-color: $card-background;
+      border-radius: $order-card-border-radius;
+      padding: 8px; // Adjusted padding
+      margin-bottom: 8px; // Adjusted margin
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; // Changed to flex-start to closely attach elements
+      align-items: flex-start;
+      height: $order-card-height;
+    }
+    
+    .order-card__store-name {
+      font-size: 16px;
+      font-weight: bold;
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      margin-bottom: 0px; // Removed margin-bottom
+    }
+    
+    .order-card__order-date,
+    .order-card__item-count,
+    .order-card__order-status {
+      font-size: 14px; // Adjusted font size
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      margin-top: 2px; // Adjusted margin-top
+    }
+    
+    .order-card__order-status {
+      padding: 2px 6px;
+      border-radius: 0px;
+      font-family: 'Times New Roman', Times, serif;
+      color: #fff;
+    
+      &.pending {
+        background-color: orange;
+      }
+    
+      &.confirmed {
+        background-color: blue;
+      }
+    
+      &.delivering {
+        background-color: teal;
+      }
+    
+      &.delivered {
+        background-color: green;
+      }
+    
+      &.declined {
+        background-color: red;
+      }
+    }
+    
+    .order-total {
+      font-size: 16px; // Adjusted font size
+      font-weight: bold;
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      margin-top: 2px; // Adjusted margin-top
+    }
+    .bgimg{
+      background-color: #3498db; /* Adjust the background color as needed */
+  border-radius: 50%;
+  width: 40px; /* Adjust the size of the avatar */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em; /* Adjust the icon size */
+  color: #fff; /* Adjust the icon color */
+    }
+    
+    .more-items {
+      font-size: 14px; // Adjusted font size
+      color: $text-color;
+      margin-top: 2px; // Adjusted margin-top
+    }
+    
+    @media (max-width: 768px) {
+      .order-card {
+        font-size: 12px; // Adjusted font size
+      }
+    
+      .order-card__order-date,
+      .order-card__item-count,
+      .order-card__order-status {
+        margin-top: 1px; // Further reduced margin-top
+      }
+    }
+    
+    @media (max-width: 992px) {
+      /* Additional styles for medium screens can be added here if needed */
+    }
+
+  

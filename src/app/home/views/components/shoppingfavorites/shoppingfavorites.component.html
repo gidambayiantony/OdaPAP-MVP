@@ -1,0 +1,67 @@
+<ion-item class="headeritem">
+  
+  <ion-label> 
+      <ion-card-title>My favorites </ion-card-title>
+      <ion-card-subtitle >{{favorites.length}} found </ion-card-subtitle>
+      
+  </ion-label>  
+</ion-item>
+
+<div class="main">
+  <div *ngIf="selectedCategory === 'category1'">
+    <!-- <app-viewmodesswitcher></app-viewmodesswitcher> -->
+    <div class="chips-2">
+    <ion-chip shape="round"  (click)="selectCateg('products')"
+    [color]="selectedCateg === 'products' ? 'white' : 'light'"
+    [style.background-color]="
+      selectedCateg === 'products' ? 'orange' : '#CCCCCC'
+    ">
+      <ion-label >Products <ion-badge>{{products.length}}</ion-badge>
+        
+        </ion-label>
+    </ion-chip>
+    <ion-chip shape="round"  (click)="selectCateg('shops')"
+    [color]="selectedCateg === 'shops' ? 'white' : 'light'"
+    [style.background-color]="
+      selectedCateg === 'shops' ? 'orange' : '#CCCCCC'
+    ">
+      <ion-label >Shops</ion-label>
+    </ion-chip>
+  </div>
+
+  <div *ngIf="selectedCateg === 'products'" >
+  <ion-grid>
+
+    
+    <ion-row>
+    <ion-col *ngFor="let productsNear of products; let p = index" col-sm="4" col-xs="12"  col-md="4">
+      <!-- <a style="text-decoration: none;" [routerLink] = "['/viewproduct']"> -->
+      <app-productcard  [product] = "productsNear" (productSaved)="addProductToFav($event)"(addToCart)="addToCart($event)"  ></app-productcard
+    >
+  <!-- </a> -->
+  
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+</div>
+    <!-- product-card.component.html -->
+
+    <div *ngIf="selectedCateg === 'shops'" >
+      <app-shopslist></app-shopslist>
+
+      
+
+      
+    </div>
+     
+  </div>
+
+
+
+<!-- <app-viewmodesswitcher [products]="products" ></app-viewmodesswitcher> -->
+
+<!-- <ion-progress-bar type="indeterminate" class="progresssloader" *ngIf="gettingfavorites" color="primary"></ion-progress-bar> -->
+
+
+<!-- <app-shopslist></app-shopslist>
+<app-productslistview></app-productslistview> -->

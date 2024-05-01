@@ -1,0 +1,36 @@
+ion-title {
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  
+  ion-content.ion-padding {
+    .order-details-title {
+      text-align: center;
+      color: #FF5733; /* Bold color */
+      font-weight: bold;
+    }
+  
+    .button-row {
+      margin-top: 20px; /* Adjust the margin as needed */
+    }
+  
+    .small-button {
+      font-size: 14px; /* Adjust the font size for smaller buttons */
+    }
+  
+    /* Responsive styles */
+    @media only screen and (max-width: 767px) {
+      .button-row {
+        display: flex;
+        flex-direction: column; /* Arrange buttons vertically on smaller screens */
+        align-items: center; /* Center buttons horizontally on smaller screens */
+      }
+  
+      .small-button {
+        width: 100%; /* Make buttons take full width on smaller screens */
+      }
+    }
+    
+  }
+  

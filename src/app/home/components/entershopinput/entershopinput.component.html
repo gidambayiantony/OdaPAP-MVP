@@ -1,0 +1,18 @@
+<ion-item class=" scanitem">
+  <ion-avatar slot="start"
+      (click)="enterIntoAStore()">
+      <ion-icon name="qr-code-outline" color="medium"></ion-icon>
+  </ion-avatar>
+  <ion-input 
+      type="text" 
+      fill="outline"
+      mode="md"
+      position="stacked"
+      aria-label="Seller Number"
+      placeholder="Enter SellerID and Pick"
+       ></ion-input>
+      <ion-button fill="clear" shape="round"
+      (click)="enterIntoAStore()">
+      Enter
+  </ion-button>
+</ion-item>

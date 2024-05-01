@@ -1,0 +1,66 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <app-newsidemenu></app-newsidemenu>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+        <ion-avatar>
+          <img src="assets/icons/stockapplogo.png" />
+        </ion-avatar>
+      </ion-buttons>
+      <ion-title>
+        <strong>Stock<span>App</span></strong>
+      </ion-title>
+
+      <!-- <app-shopping-search></app-shopping-search> -->
+      <ion-buttons slot="end">
+        <ion-icon
+          class="space custom-icon"
+          color="primary"
+          name="search-outline"
+        ></ion-icon>
+
+        <div class="cart-container">
+          <a [routerLink]="['/cartpage']">
+          <ion-icon name="cart" class="space custom-icon"></ion-icon
+          ><ion-badge class="cart-badge">{{shopCart.length}}</ion-badge>
+        </a>
+        </div>
+
+        <app-guestloginbtn class="space"></app-guestloginbtn>
+
+        <ion-button  *ngIf="selectedTab === 'orders'" (click) ="presentPopover($event)" fill="clear" class="space">
+          <ion-icon name="timer-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content
+    class="shophomcontainer"
+    id="scrollcontainer"
+    #content
+    [scrollEvents]="true"
+    (ionScroll)="logScrolling($event)"
+    (ionScrollStart)="logScrollStart($event)"
+    (ionScrollEnd)="logScrollEnd($event)"
+  >
+    <!-- <ion-refresher mode="md" slot="fixed" (ionRefresh)=" doRefresh( $event )"
+      pullFactor="0.8" pullMin="60" pullMax="120">
+      <ion-refresher-content></ion-refresher-content>
+  </ion-refresher> -->
+
+    <!-- Desktop App Menu  -->
+    <app-shoppingtabs (tabSelected)="updateSelectedTab($event)" class="sections sticky shophomemenu" /> 
+
+    <!-- <app-shoppingsections></app-shoppingsections> -->
+  </ion-content>
+</div>

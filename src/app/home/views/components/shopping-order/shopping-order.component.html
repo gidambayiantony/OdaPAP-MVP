@@ -1,0 +1,40 @@
+<ion-row mode="md" class="stickytabs">
+  <ion-segment value="myorders"(ionChange)="segmentChanged($event)">
+      <ion-segment-button value="myorders"
+          (click)="ordersegment='myorders'" layout="icon-top">
+          <ion-icon name="bag-handle-outline"></ion-icon>
+          <!-- <ion-label>My Orders</ion-label> -->
+      </ion-segment-button>
+
+      <!--  -->
+      <ion-segment-button value="analyisis"
+          (click)="ordersegment='analyisis';getOrderAnalysis()"
+          layout="icon-top">
+          <ion-icon name="analytics-outline"></ion-icon>
+          <!-- <ion-label>Orders Report</ion-label> -->
+      </ion-segment-button>
+  </ion-segment>
+</ion-row>
+
+
+
+
+  
+  
+<!-- The ng-container directive is used to group elements together. -->
+<ng-container *ngIf="ordersegment === 'myorders'">
+
+  <!-- The app-orderslist component is only rendered if the ordersegment variable is equal to 'myorders'. -->
+  <app-orderslist></app-orderslist>
+</ng-container>
+  
+
+
+
+
+<!-- Order Analysis Section -->
+<ng-container *ngIf="ordersegment === 'analyisis'">
+  <!-- Content specific to Order Analysis section -->
+  <app-orderanalysis></app-orderanalysis>
+</ng-container>
+

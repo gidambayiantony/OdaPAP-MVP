@@ -1,0 +1,6 @@
+<ion-chip (click)="openGuestPopup()" color="medium" mode="ios" outline="true" class="desktopview guestbadge">
+   <ion-icon name="person"></ion-icon>
+   <ion-label *ngIf="!isUserLoggedIn">Guest Account</ion-label>
+   <ion-label *ngIf="isUserLoggedIn">Hello, {{ userName }}</ion-label>
+ </ion-chip>
+ 

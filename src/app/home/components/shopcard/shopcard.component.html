@@ -1,0 +1,20 @@
+<ion-item 
+button 
+mode="ios"  
+ 
+class="shopitem">
+<ion-avatar slot="start" class="bgimg"
+     >
+    <ion-img src= {{shop.logo}}></ion-img>
+</ion-avatar>
+<ion-label>
+    <p class="dist">{{shop.awaydescr}}  </p>
+    <h3>{{shop.name}}</h3>
+    <p class="descr">{{shop.dealswith}}</p>
+</ion-label>
+
+<ion-button slot="end">
+    <ion-icon slot="icon-only" name="storefront-outline"></ion-icon>
+    Enter
+</ion-button>
+</ion-item>

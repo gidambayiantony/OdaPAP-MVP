@@ -1,0 +1,38 @@
+<ion-row class="switcherview " mode="md"   > 
+  <ion-segment mode="md" color="primary" value="products"
+      (ionChange) = "segmentChanged($event)"
+       >
+      <ion-segment-button value="products">
+          <ion-label class="shake"> 
+              <span *ngIf="categorytype==='retails'">Products</span> 
+              <span *ngIf="categorytype==='services'">Services</span> 
+              <span color="primary"> 
+                  <!-- {{ productscounts | number }} -->
+              </span>
+          
+          </ion-label>
+      </ion-segment-button>
+
+      <ion-segment-button value="shops">
+          <ion-label> 
+              Sellers Around
+              <span color="primary"> 
+                    <!-- {{ shopscounts| number }} -->
+              </span> 
+          </ion-label>
+      </ion-segment-button>
+  </ion-segment> 
+</ion-row>
+
+ 
+<div class="cont" *ngIf="selectedTab === 'shops'" >
+  <app-shopslist></app-shopslist>
+</div>
+
+<div class="cont" *ngIf="selectedTab === 'products'">
+   
+  <app-productslistview></app-productslistview>
+</div>
+
+
+

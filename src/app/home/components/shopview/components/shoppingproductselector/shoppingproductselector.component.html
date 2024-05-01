@@ -1,0 +1,79 @@
+<ion-content>
+          <ion-item class="shopprofileitem">
+            <ion-avatar slot="start" class="logo bgimg"   style="background-image: url('{{shop.logo}}');">
+            
+            </ion-avatar>
+            <ion-label> 
+              <ion-row class="shopdetails">
+                  <p>{{shop.awaydescr}}</p>
+                  <h1>{{shop.name}}</h1>
+                  <p>{{shop.descr}}</p>
+              </ion-row>
+              <ion-row class="shopcontacts">
+                  <ion-button fill="clear" size="small" (click)="callShop()"> 
+                    <ion-icon name="call-outline"></ion-icon>
+                  </ion-button>
+                  <ion-button fill="clear" size="small" (click)="smsShop()"> 
+                    <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+                  </ion-button>
+                  <ion-button fill="clear" size="small" (click)="whatsappShop()"> 
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                  </ion-button>
+              </ion-row>
+            </ion-label>
+        </ion-item>
+        
+        <ion-segment class="sticky" value="all" (ngModelChange)="changeTab($event)" [(ngModel)]="activetab">
+            <ion-segment-button value="all">
+              <ion-label>All </ion-label>
+            </ion-segment-button>
+            <!-- <ion-segment-button value="wholesale">
+              <ion-label>Wholesale</ion-label>
+            </ion-segment-button> -->
+        
+            <ion-segment-button value="offers">
+              <ion-label>Offers</ion-label>
+            </ion-segment-button>
+        </ion-segment>
+        
+       
+        <app-shoppingselectorslides 
+            *ngIf="activetab != 'offers'"
+            [activetab]="activetab"
+            [categories]="categories"
+            [shop]="shop" 
+        ></app-shoppingselectorslides> 
+
+        <app-shoppingoffers 
+            *ngIf="activetab == 'offers'" 
+            [activetab]="activetab" 
+            [shop]="shop" 
+        ></app-shoppingoffers> 
+
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+     <ion-col class="cancel" (click)="modalCntr.dismiss()" > 
+         <h1>Cancel</h1>
+     </ion-col>
+
+     <ion-col size="8" class="savebtn" (click)="saveCart()">
+        <h3> Save </h3>
+        <div class="countslbl">
+            Entries 
+            <p>{{inshopcart.entries | number }}</p>
+        </div>
+
+        <div class="countslbl">
+            Qty 
+            <p>{{inshopcart.qty | number }}</p>
+        </div>
+        
+        <div class="countslbl">
+           Totals 
+           <p>{{inshopcart.totals | number }}</p>
+        </div>
+     </ion-col>
+  </ion-row>
+</ion-footer>

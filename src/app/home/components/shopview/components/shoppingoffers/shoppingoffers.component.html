@@ -1,0 +1,51 @@
+<ion-list class="offerslist" > 
+  <h1>Offers</h1>
+  <p>{{offers.length}} Availabel </p>
+  <ion-item
+    button
+    *ngFor="let offer of offers; let i = index"
+    
+    class="offersingleitem cursor pointer">
+      <ion-avatar slot="start" class="offerlogo" (click)="increaseQtyInCart(offer )">
+          <ion-icon name="bag-handle-outline"></ion-icon>
+      </ion-avatar>
+      
+      <ion-label (click)="increaseQtyInCart(offer )"> 
+        <ion-row class="offerdetails">
+          <p class="expirydate"> {{offer.expirydate | date :"medium"}}</p>
+          <h3 class="offername">{{offer.name}}</h3>
+          <p class="qtyleft">{{offer.available}}  available </p>
+        </ion-row>
+        <ion-row class="offerthumbschips">
+          <div class="bgimage"
+          style="background-image: url('{{item.media[0].url}}');"
+            *ngFor="let item of offer.items">
+
+          </div>
+        </ion-row>
+      </ion-label>
+
+      <ion-badge  
+      (click)="increaseQtyInCart(offer )"
+      color="medum" mode="ios">
+          <h3 class="totals"><span class="currency">{{shop.currency}} </span>  {{offer.totals}}</h3>
+          <del class="oldamnt">Old  <span class="currency">{{shop.currency}} </span> {{offer.totals + offer.discount }} </del>
+          <p class="discount">Save <span class="currency">{{shop.currency}} </span>{{offer.discount }} </p>
+      </ion-badge>
+
+      <ion-avatar slot="end" class="qtyadjuster" *ngIf="offer.qtyincart"> 
+              <ion-button fill="clear" class="increasebtn"
+                  (click)="increaseQtyInCart(offer)">
+                  <ion-icon name="add"></ion-icon> 
+              </ion-button>
+              
+              <ion-input type="number" [(ngModel)]="offer.qtyincart" (ngModelChange)="adjustQty(offer)"></ion-input>
+
+              <ion-button fill="clear" class="decreasebtn"
+                  (click)="decreaseQtyInCart(offer)">
+                  <ion-icon name="remove"></ion-icon> 
+              </ion-button>
+      </ion-avatar>
+
+  </ion-item>
+</ion-list>

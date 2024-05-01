@@ -1,0 +1,143 @@
+<ion-header>
+
+
+<ion-col class="margincentered shoppingtabsrow">
+
+  <div>
+
+    <div>
+  <!-- siz
+e-md="8" size-lg="7" size-xl="7" size-xs="12" size-sm="12" -->
+  <ion-segment
+    mode="md"
+    scrollable="false"
+    value="recentshops"
+    class="small-segment"
+    (ionChange)="segmentChanged($event)"
+  >
+    <ion-segment-button class="small-segment" value="odapap" layout="icon-top">
+      <ion-icon name="storefront-outline"></ion-icon>
+      <ion-label class="">
+        OdaPAP!
+        <i>Just like that</i>
+      </ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button class="small-segment" value="nearme" layout="icon-top">
+      <ion-icon name="location"></ion-icon>
+      <ion-label class="">
+       Near me
+        <i>Here now.</i>
+      </ion-label>
+    </ion-segment-button>
+
+    <ion-segment-button class="small-segment" value="recents" layout="icon-top">
+      <!-- <ion-chip  mode="md"  color="medium"  outline="true" >   -->
+      <ion-icon name="reload-circle"></ion-icon>
+      <ion-label class="">
+        My Recent
+        <i>Revisit</i>
+      </ion-label>
+      <!-- </ion-chip>     -->
+    </ion-segment-button>
+
+    <!--  -->
+    <ion-segment-button class="small-segment" value="favorites" layout="icon-top">
+      <!-- <ion-chip mode="md" color="medium" outline="true">  -->
+      <ion-icon name="heart-circle"></ion-icon>
+      <ion-label class="">
+        My Favorites
+        <i>Re-order</i>
+      </ion-label>
+      <!-- </ion-chip>     -->
+    </ion-segment-button>
+
+    <!-- my orders -->
+    <ion-segment-button class="small-segment" value="orders" layout="icon-top">
+      <!-- <ion-chip mode="md" color="medium" outline="true">  -->
+      <ion-icon name="bag-check"></ion-icon>
+      <ion-label class="">
+        My Orders
+        <i>fulfilled</i>
+      </ion-label>
+      <!-- </ion-chip> -->
+    </ion-segment-button>
+
+    <!-- my orders -->
+    <ion-segment-button class="small-segment" value="expenses" layout="icon-top">
+      <!-- <ion-chip mode="md" color="medium" outline="true">  -->
+      <ion-icon name="analytics-outline"></ion-icon>
+      <ion-label class="">
+        My Expenses
+        <i>Stay Aware</i>
+      </ion-label>
+      <!-- </ion-chip> -->
+    </ion-segment-button>
+
+   
+   
+  </ion-segment>
+</div>
+  <!-- <div>
+
+     <ion-item>
+    <ion-range [(ngModel)]="sliderValue" (ionChange)="updateValue($event)">
+      <ion-label slot="start">0</ion-label>
+      <ion-label slot="end">100</ion-label>
+    </ion-range>
+  </ion-item>
+
+  </div> -->
+</div>
+
+ 
+  
+  
+
+ 
+    
+ 
+</ion-col>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="selectedTab === 'odapap'">
+        <app-odapap></app-odapap>
+      </div>
+      <!-- <div *ngIf="selectedTab === 'odapap'">
+        <app-newcomponent></app-newcomponent>
+      </div> -->
+
+      <div *ngIf="selectedTab === 'nearme'">
+        <app-nearme></app-nearme>
+      </div>
+
+      <div *ngIf="selectedTab === 'recents'">
+        
+        <app-shoppingrecent></app-shoppingrecent>
+     
+      </div>
+ 
+      <div *ngIf="selectedTab === 'favorites'">
+        <app-shoppingfavorites></app-shoppingfavorites>
+      </div>
+
+
+      <div *ngIf="selectedTab === 'orders'">
+        
+        <app-shopping-order></app-shopping-order>
+        
+      </div>
+
+      
+      <div *ngIf="selectedTab === 'expenses'">
+        
+   <app-pickdate />
+        
+      </div>
+
+      
+
+</ion-content>
+
+ 

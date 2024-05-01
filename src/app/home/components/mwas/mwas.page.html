@@ -1,0 +1,34 @@
+ <!-- cart-item.component.html -->
+<ion-content>
+<ion-list *ngIf="itemsInCart.length > 0; else emptyCart">
+  <ion-item *ngFor="let item of itemsInCart">
+<div class= "cart-item">
+  <div class="product-info">
+    <img [src]="item.image" class="product-image">
+    <div class="product-details">
+      <p class="product-name">{{item.productName}}</p>
+      <div class="quantity-container">
+        <button   class="quantity-button">-</button>
+        <p class="quantity">{{quantity}}</p>
+        <button  (click)="increaseQuantity()"  class="quantity-button">+</button>
+      </div>
+    </div>
+  </div>
+  <div slot="end" class="price-section">
+    <p class="price">$20.00</p>
+    <button  class="remove-button">Remove</button>
+  </div>
+</div>
+</ion-item>
+</ion-list>
+</ion-content>
+
+
+<ion-content>
+  <ng-template #emptyCart>
+    <img src="https://www.jumia.co.ke/assets_he/images/cart.668e6453.svg" alt="Empty Cart Image" style="width: 150px; height: 150px;">
+    <div class="empty-cart-message">Your shopping cart is empty!</div>
+    <div class="empty-cart-text">Browse our categories and discover our best deals!</div>
+    <a href="/home" class="start-shopping-btn">Start Shopping</a>
+  </ng-template>
+</ion-content>

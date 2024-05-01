@@ -1,0 +1,105 @@
+<ion-item class="headeritem">
+  <ion-label> 
+    <ion-card-subtitle>{{ recents.length }} found</ion-card-subtitle>
+    <ion-card-title>My recents</ion-card-title>
+  </ion-label>  
+</ion-item>
+<div class="main">
+  <div *ngIf="selectedCategory === 'category1'">
+    <!-- <app-viewmodesswitcher></app-viewmodesswitcher> -->
+    <div class="chips-2">
+    <ion-chip shape="round"  (click)="selectCateg('products')"
+    [color]="selectedCateg === 'products' ? 'white' : 'light'"
+    [style.background-color]="
+      selectedCateg === 'products' ? 'orange' : '#CCCCCC'
+    ">
+      <ion-label >Products <ion-badge>{{products.length}}</ion-badge>
+        
+        </ion-label>
+    </ion-chip>
+    <ion-chip shape="round"  (click)="selectCateg('shops')"
+    [color]="selectedCateg === 'shops' ? 'white' : 'light'"
+    [style.background-color]="
+      selectedCateg === 'shops' ? 'orange' : '#CCCCCC'
+    ">
+      <ion-label >Shops</ion-label>
+    </ion-chip>
+  </div>
+
+  <div *ngIf="selectedCateg === 'products'" >
+  <ion-grid>
+
+    
+    <ion-row>
+    <ion-col *ngFor="let productsNear of products; let p = index" col-sm="4" col-xs="12"  col-md="4">
+       
+      <app-productcard  [product] = "productsNear" (productSaved)="addProductToFav($event)" (addToCart)="addToCart($event)"   /> 
+    
+
+  
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+</div>
+    <!-- product-card.component.html -->
+
+
+    <div *ngIf="selectedCateg === 'shops'" >
+
+      <h2>shops selected</h2>
+      <div class="centercontent">
+        <ion-list  >
+          <ion-row>
+              <ion-col 
+              class="shopitemcol" 
+              size-sm="12" size-xs="12" size-md="4" size-lg="3" size-xl="3"
+              *ngFor=" let store of   dummyshops;  let p= index;  " 
+              >
+              hello
+           <a [routerLink] = "['/viewshop',store.shopid]">
+               {{store.name}}
+            </a>
+                  <!-- <ion-item 
+                  button 
+                  mode="ios"  
+                  (click)="openShopModal()"
+                  class="shopitem">
+                  <ion-avatar slot="start" class="bgimg"
+                       >
+                      <ion-img src= {{store.logo}}></ion-img>
+                  </ion-avatar>
+                  <ion-label>
+                      <p class="dist">{{store.awaydescr}}  </p>
+                      <h3>{{store.name}}</h3>
+                      <p class="descr">{{store.dealswith}}</p>
+                  </ion-label>
+        
+                  <ion-button slot="end">
+                      <ion-icon slot="icon-only" name="storefront-outline"></ion-icon>
+                      Enter
+                  </ion-button>
+              </ion-item>  -->
+              </ion-col>
+          </ion-row> 
+        </ion-list>
+        </div>
+      <!-- <app-shopslist /> -->
+      <!-- <app-shopslist></app-shopslist> -->
+
+      
+
+      
+    </div>
+     
+  </div>
+
+
+<!-- <app-viewmodesswitcher></app-viewmodesswitcher> -->
+
+<!-- <ion-progress-bar type="indeterminate" class="progresssloader" *ngIf="gettingrecents" color="primary"></ion-progress-bar> -->
+
+
+<!-- <app-shopslist></app-shopslist>
+<app-productslistview></app-productslistview> -->
+
+

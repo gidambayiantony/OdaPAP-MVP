@@ -1,0 +1,86 @@
+<!-- src/app/checkout/checkout.page.html -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center" style="font-size: 24px; font-weight: bold;">Checkout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list class="ion-text-center">
+    <!-- Order Summary -->
+    <ion-item>
+      <ion-label style="font-size: 20px; font-weight: bold;">Cart Summary</ion-label>
+    </ion-item>
+    <ion-list *ngFor="let item of itemsInCart">
+      <ion-item>
+        <ion-label>{{ item.productName }}</ion-label>
+        <ion-label slot="end">{{ item.quantity }} x {{ item.price | currency }}</ion-label>
+      </ion-item>
+    </ion-list>
+
+    <!-- Confirm Order -->
+    <!-- <ion-item>
+      <ion-label style="font-size: 20px; font-weight: bold;">
+        Confirm Order
+      </ion-label>
+      <ion-text>
+        <p style="font-size: 18px; font-weight: bold;">Total Amount: {{ getTotalAmount() | currency }}</p>
+      </ion-text>
+    </ion-item> -->
+
+    <!-- Delivery Details -->
+    <ion-item style="text-align: left;">
+      <ion-label style="font-size: 20px; font-weight: bold;">
+        Delivery Details
+      </ion-label>
+      <ion-select placeholder="Select Delivery Option" style="font-size: 18px;">
+        <ion-select-option value="viewPick">View and Pick</ion-select-option>
+        <ion-select-option value="deliverToLocation">Deliver to My Location</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <!-- Estimated Delivery Time -->
+    <!-- <ion-item style="text-align: left;">
+      <ion-label style="font-size: 20px; font-weight: bold;">Estimated Delivery Time</ion-label>
+      <ion-text style="font-size: 18px;">{{ calculateEstimatedDeliveryTime() }}</ion-text>
+    </ion-item>
+     -->
+    <!-- Special Instructions -->
+    <ion-item>
+      <ion-label style="font-size: 20px; font-weight: bold;">Special Instructions</ion-label>
+      <ion-textarea style="font-size: 18px;" placeholder="Any special instructions?"></ion-textarea>
+    </ion-item>
+
+    <!-- Payment Method -->
+    <ion-item style="text-align: left;">
+      <ion-label style="font-size: 20px; font-weight: bold;">
+        Payment Method
+      </ion-label>
+      <ion-select placeholder="Select Payment Method" style="font-size: 18px;">
+        <ion-select-option value="creditCard">Credit Card</ion-select-option>
+        <ion-select-option value="paypal">PayPal</ion-select-option>
+        <ion-select-option value="m-pesa">M-pesa</ion-select-option>
+        <ion-select-option value="cash">Cash</ion-select-option>
+        <!-- Add more payment options as needed -->
+      </ion-select>
+    </ion-item>
+    
+    <!-- Promo Code -->
+    <ion-item>
+      <ion-input style="font-size: 18px;" placeholder="Enter Promo Code"></ion-input>
+    </ion-item>
+
+    <!-- Order Total and Payment Breakdown -->
+    <!-- <ion-item>
+      <ion-label style="font-size: 20px; font-weight: bold;">Subtotal</ion-label>
+      <ion-text style="font-size: 18px;">{{ getTotalAmount() | currency }}</ion-text>
+    </ion-item> -->
+
+  </ion-list>
+
+  <!-- Complete Order Button -->
+  <ion-button [routerLink]="['/home']" expand="full" color="orange" style="margin: 20px; font-size: 18px;">
+    Complete Order
+  </ion-button>
+</ion-content>

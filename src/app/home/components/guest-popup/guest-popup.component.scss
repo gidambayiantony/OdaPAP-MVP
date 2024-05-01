@@ -1,0 +1,19 @@
+/* src/app/home/components/guest-popup/guest-popup.component.scss */
+
+ion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    .popup-text {
+      text-align: center;
+    }
+
+    
+  
+    ion-button {
+      margin-top: 10px; /* Add margin for spacing between buttons */
+    }
+  }
+  

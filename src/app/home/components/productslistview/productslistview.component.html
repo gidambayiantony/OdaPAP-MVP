@@ -1,0 +1,17 @@
+
+<div class="centercontent">
+<ion-grid > 
+  <ion-row>
+      <ion-col class="listviewitem" 
+      col-sm="4" col-xs="12"  col-md="4" 
+          *ngFor="let product of products;let p= index;   "
+          > 
+
+        
+              <app-singleproductlistview
+                   
+              ></app-singleproductlistview>  
+      </ion-col> 
+  </ion-row>
+ </ion-grid>
+</div>

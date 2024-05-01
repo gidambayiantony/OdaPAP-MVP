@@ -1,0 +1,159 @@
+.cart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -2px; /* Adjust the right position based on your design */
+  background-color: orange; /* Choose your background color */
+  color: white;
+  font-size: 10px; /* Adjust font size based on your design */
+  padding: 4px 8px; /* Adjust padding based on your design */
+}
+/* Your CSS file */
+
+
+.tabs{
+    ion-label{
+
+        text-transform: capitalize;
+
+    }
+}
+
+.center-content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+  
+    .smalltext {
+      font-size: 0.8em;
+      letter-spacing: 0;
+      color: orange;
+    }
+  
+    p {
+      letter-spacing: 2px;
+    }
+  
+    h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+  
+    h6 {
+      color: orange;
+      font-size: 1.0em;
+  
+      .orangetext {
+        color: orange;
+      }
+    }
+  
+    h2 {
+      font-weight: bolder;
+    }
+  }
+  
+  .orangetext {
+    color: #57a3d7;
+  }
+  
+  .main {
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    padding: 20px;  /* Add padding to improve card spacing */
+  }
+  
+  ion-segment-button {
+    min-width: 300px;
+     
+    border-radius: 20px; // Adjust the border-radius for pill shape
+    margin: 0; // Adjust margin for spacing between pills
+  
+    &.segment-selected {
+      background-color: #ff9800; // Orange color for the selected pill
+      color: #fff; // Text color for the selected pill
+    }
+  }
+  
+  .chips {
+    text-align: left;
+  
+    ion-label {
+      font-weight: bold;
+    }
+  }
+  .chips-2 {
+  
+    text-align: center;
+  
+    ion-label {
+      font-weight: bold;
+    }
+  }
+  
+  ion-badge {
+    --background: #57a3d7;
+    border-radius: 20px;
+  }
+  
+  .selectTabs {
+    text-align: center;
+  }
+  
+  /* product-card.component.scss */
+  .product-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .dist{
+    font-size: small;
+    margin-top: 8px;
+    color: #ff9800;
+  }
+  .custom-icon{
+    font-size: 20px;
+    margin-right: 20px;
+  }
+   
+.flex-cont{
+    display: flex;
+    align-items: center;
+    
+    .col{
+        margin-left: 4px;
+    }
+}
+
+/* Add this style to your component's CSS or global styles */
+.circular-avatar {
+    margin-top: 12px;
+    width: 50px; /* Set your preferred width */
+    height: 50px; /* Set your preferred height */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the circular area */
+  }
+  
+  .small-segment {
+    min-width: auto; /* Set a specific width if needed */
+    padding: 2px; /* Adjust padding as needed */
+  }
+  
+  .transparent-segment {
+    background-color: transparent !important;
+    border: none !important;
+  }
+
+  

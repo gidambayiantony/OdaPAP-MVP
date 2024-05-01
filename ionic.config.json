@@ -1,0 +1,10 @@
+{
+  "name": "stockapp_shopping_app",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular-standalone"
+}

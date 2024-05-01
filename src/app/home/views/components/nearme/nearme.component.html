@@ -1,0 +1,121 @@
+<div class="center-content">
+  <h6>Check out shops near you</h6>
+  <h1>Pick what you're looking for</h1>
+  <p>Order and pick from shops near you</p>
+  <div class="flex-cont">
+    <div>
+      <h5>Customize</h5> 
+    </div>
+   <div>
+   
+    <ion-button (click) ="openBottomSheet()"> 
+      <ion-icon name="chevron-down-circle-outline" />
+    </ion-button>
+    
+
+   </div>
+    
+    
+  
+  </div>
+ 
+  <div class="chips">
+    <ion-chip
+      (click)="selectCategory('category1')"
+      [color]="selectedCategory === 'category1' ? 'white' : 'light'"
+      [style.background-color]="
+        selectedCategory === 'category1' ? 'orange' : '#CCCCCC'
+      "
+    >
+      <ion-label>All items <ion-badge>{{products.length}}</ion-badge></ion-label>
+    </ion-chip>
+
+    <ion-chip
+      (click)="selectCategory('category2')"
+      [color]="selectedCategory === 'category2' ? 'primary' : 'light'"
+      [style.background-color]="
+        selectedCategory === 'category2' ? 'orange' : '#CCCCCC'
+      "
+    >
+      <ion-label
+        >Phones , Tablets and Accessories <ion-badge>20</ion-badge>
+      </ion-label>
+    </ion-chip>
+
+    <ion-chip
+      (click)="selectCategory('category3')"
+      [color]="selectedCategory === 'category3' ? 'primary' : 'light'"
+      [style.background-color]="
+        selectedCategory === 'category3' ? 'orange' : '#CCCCCC'
+      "
+    >
+      <ion-label>Computing <ion-badge>5</ion-badge></ion-label>
+    </ion-chip>
+
+    <ion-chip
+      shape="round"
+      (click)="selectCategory('category4')"
+      [color]="selectedCategory === 'category4' ? 'primary' : 'light'"
+      [style.background-color]="
+        selectedCategory === 'category4' ? 'orange' : '#CCCCCC'
+      "
+    >
+      <ion-label>Beauty and Cosmetics <ion-badge>2</ion-badge></ion-label>
+    </ion-chip>
+  </div>
+</div>
+
+<div class="main">
+  <div *ngIf="selectedCategory === 'category1'">
+    <!-- <app-viewmodesswitcher></app-viewmodesswitcher> -->
+    <div class="chips-2">
+    <ion-chip shape="round"  (click)="selectCateg('products')"
+    [color]="selectedCateg === 'products' ? 'white' : 'light'"
+    [style.background-color]="
+      selectedCateg === 'products' ? 'orange' : '#CCCCCC'
+    ">
+      <ion-label >Products</ion-label>
+    </ion-chip>
+    <ion-chip shape="round"  (click)="selectCateg('shops')"
+    [color]="selectedCateg === 'shops' ? 'white' : 'light'"
+    [style.background-color]="
+      selectedCateg === 'shops' ? 'orange' : '#CCCCCC'
+    ">
+      <ion-label >Shops</ion-label>
+    </ion-chip>
+  </div>
+
+  <div *ngIf="selectedCateg === 'products'" >
+  <ion-grid>
+
+    
+    <ion-row>
+    <ion-col *ngFor="let productsNear of products; let p = index" col-sm="4" col-xs="12"  col-md="4">
+    
+      <app-productcard  [product] = "productsNear" (productSaved)="addProductToFav($event)"  (addToCart)="addToCart($event)"></app-productcard
+        >
+  
+  
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+</div>
+    <!-- product-card.component.html -->
+
+    <div *ngIf="selectedCateg === 'shops'" >
+      <!-- <div class="flex-container">
+        <h2>Top Shops</h2>
+        <h4>See All</h4>
+      </div> -->
+    
+      <app-shopslist></app-shopslist>
+
+      
+
+      
+    </div>
+     
+  </div>
+  
+ 
+</div>
