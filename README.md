@@ -32,5 +32,5 @@ We welcome contributions from the community to improve OdaPAP MVP. To contribute
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Screenshots
-![Screenshot 1](insert_screenshot1_link_here)
-![Screenshot 2](insert_screenshot2_link_here)
+![Screenshot 1](https://github.com/gidambayiantony/OdaPAP-MVP/blob/main/src/assets/img/oda1.PNG)
+![Screenshot 2](https://github.com/gidambayiantony/OdaPAP-MVP/blob/main/src/assets/img/oda3.PNG)
